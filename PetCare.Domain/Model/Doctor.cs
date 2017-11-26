@@ -4,14 +4,9 @@ using System.Text;
 
 namespace PetCare.Domain.Model
 {
-    class Doctor
+    class Doctor : Person
     {
-        int id;
-        int matricula;
-        string firstName;
-        string lastName;
-        int age;
-        int phone;
-        string email;
+        public int DoctorId { get; set; }
+        public int Matricula { get; set; }
     }
 }

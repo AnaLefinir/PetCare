@@ -4,14 +4,8 @@ using System.Text;
 
 namespace PetCare.Domain.Model
 {
-    public class Owner
+    public class Owner : Person
     {
-        public int id;
-        public string firstName;
-        public string lastName;
-        public int age;
-        public string address;
-        public int phone;
-        public string email;
+        public int OwnerId { get; set; }
     }
 }

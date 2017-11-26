@@ -6,8 +6,8 @@ namespace PetCare.Domain.Model
 {
     class User
     {
-        int id;
-        string userName;
-        string password;
+        public int UserId { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }
