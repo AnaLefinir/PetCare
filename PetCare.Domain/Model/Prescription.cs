@@ -4,11 +4,11 @@ using System.Text;
 
 namespace PetCare.Domain.Model
 {
-    public class Owner : Person
+    public class Prescription
     {
         //UNIQUE
         public int ID { get; set; }
-
-        public virtual ICollection<Pet> Pets { get; set; }
+        public DateTime PrescriptionDate { get; set; }
+        public string Description { get; set; }
     }
 }

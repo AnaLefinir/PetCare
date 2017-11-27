@@ -4,12 +4,15 @@ using System.Text;
 
 namespace PetCare.Domain.Model
 {
-    class Pet
+    public class Pet
     {
-        public int PetId { get; set; }
+        //UNIQUE
+        public int ID { get; set; }
         public string Name { get; set; }
         public DateTime Birthdate { get; set; }
         public string Type { get; set; }
 
+        //Navigation Property from Owner's FK
+        public virtual Owner OwnerId { get; set; }
     }
 }

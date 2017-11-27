@@ -4,10 +4,13 @@ using System.Text;
 
 namespace PetCare.Domain.Model
 {
-    class User
+    public class User
     {
-        public int UserId { get; set; }
+        //UNIQUE
+        public int ID { get; set; }
+        //UNIQUE
         public string Username { get; set; }
+        //UNIQUE
         public string Password { get; set; }
     }
 }
