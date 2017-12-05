@@ -16,11 +16,10 @@
     <div class="container">
 
         <div class="row" id="pwd-container">
-            <div class="col-md-4"></div>
 
-            <div class="col-md-4">
-                <section class="login-form" action="@Url.Action("EnterSystem", "Login")" method="post">
-                    <form role="login">
+            <div class="col-md-4 col-md-offset-4">
+                <section class="login-form" >
+                    <form role="login" action="@Url.Action("Index", "Administrator")" method="post">
                         <img src="~/Content/img/PetCareLogo.png" />
                         <input type="email" name="email" placeholder="Email" required class="form-control input-lg" value="joestudent@gmail.com" />
 

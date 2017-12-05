@@ -1,1 +1,9 @@
 /* your styles go here */
+
+img.prueba {
+    opacity: 0.5;
+}
+img.prueba:hover {
+    opacity: 1;
+    filter: hue-rotate(300deg)
+}

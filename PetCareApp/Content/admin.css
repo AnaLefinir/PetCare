@@ -1,0 +1,50 @@
+﻿.main {
+    padding: 15px;
+}
+
+.index {
+    padding-top: 100px
+}
+
+h3 {
+    padding-top: 25px;
+}
+
+.statistic-block strong.add{
+    color: darkorchid;
+    font-size: 1.3rem;
+}
+
+.center {
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+    .center img {
+        opacity: 0.5;
+        display: block;
+        margin: 0 auto;
+    }
+    .center img:hover {
+        
+    }/*
+.center:hover {
+   opacity: 1;
+   color: deeppink;
+    }
+
+    .center:hover strong.add {
+        color: deeppink;
+        opacity: 1;
+    }*/
+.statistic-block.block:hover img{
+    opacity: 1;
+}
+
+.statistic-block.block:hover strong.add {
+    color: deeppink;
+}
+
+.title.center a:hover {
+    text-decoration: none;
+}

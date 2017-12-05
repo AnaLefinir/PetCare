@@ -45,6 +45,8 @@ namespace PetCareApp
                 "~/Content/js/charts-home.js",
                 "~/Content/js/front.js"));
 
+            bundles.Add(new StyleBundle("~/Content/Admin").Include(
+                "~/Content/admin.css"));
         }
     }
 }

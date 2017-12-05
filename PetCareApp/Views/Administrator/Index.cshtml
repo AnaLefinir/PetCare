@@ -3,6 +3,59 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Styles.Render("~/Content/Admin")
 
-<h2>Index</h2>
 
+<div class="main">
+    <h2>Hi DarkAdmin!</h2>
+
+    <h3> What do you want to do today? </h3>
+    
+    <section class="index">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="statistic-block block">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="title center">
+                                <div class="icon"><img src="~/Content/img/PawWhite.png" /></div><strong class="add">Add Pet</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="statistic-block block">
+                        <div class=" d-flex align-items-end justify-content-between">
+                            <div class="title center">
+                                <div class="icon"><img src="~/Content/img/OwnerWhite.png" /></div><strong class="add">Add Owner</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="statistic-block block">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="title center">
+                                <a href="@Url.Action("Index","Login")"><div class="icon"><img src="~/Content/img/VeterinarianWhite.png" /></div><strong class="add">Add Doctor</strong></a>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="statistic-block block">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="title center">
+                                <div class="icon"><img src="~/Content/img/UserWhite.png" /></div><strong class="add">Add User</strong>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+</div>
