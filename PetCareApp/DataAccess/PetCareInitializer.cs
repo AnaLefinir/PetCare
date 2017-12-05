@@ -8,19 +8,10 @@ using PetCareApp.Models;
 
 namespace PetCareApp.DataAccess
 {
-    public class PetCareInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<PetCareContext>
+    public class PetCareInitializer : System.Data.Entity.DropCreateDatabaseAlways<PetCareContext>
     {
         protected override void Seed(PetCareContext context)
         {
-            var doctors = new List<Doctor>
-            {
-                new Doctor {Matricula=4124 },
-                new Doctor {Matricula=4123 }
-            };
-
-            doctors.ForEach(s => context.Doctors.Add(s));
-            context.SaveChanges();
-
             var pets = new List<Pet>
             {
                     new Pet {Name="Crookshanks", Birthdate=DateTime.Parse("2004-10-28"), Type="Cat" },
@@ -30,6 +21,8 @@ namespace PetCareApp.DataAccess
 
             pets.ForEach(s => context.Pets.Add(s));
             context.SaveChanges();
+
+
         }
     }
 }

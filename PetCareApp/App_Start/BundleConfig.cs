@@ -24,8 +24,27 @@ namespace PetCareApp
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Login").Include(
+                "~/Content/login.css"));
+
+
+            bundles.Add(new StyleBundle("~/Content/AdmiIndex").Include(
+                "~/Content/vendor/bootstrap/css/bootstrap.min.css",
+                "~/Content/vendor/font-awesome/css/font-awesome.min.css",
+                "~/Content/css/font.css",
+                "~/Content/css/style.default.css",
+                "~/Content/css/custom.css"
+                ));
+
+            bundles.Add(new ScriptBundle("~/Content/jsadmi").Include(
+                "~/Content/vendor/bootstrap/js/bootstrap.min.js",
+                "~/Content/vendor/chart.js/Chart.min.js",
+                "~/Content/vendor/chart.js/Chart.min.js",
+                "~/Content/js/charts-home.js",
+                "~/Content/js/front.js"));
+
         }
     }
 }

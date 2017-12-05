@@ -148,7 +148,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PetController.cs" />
     <Compile Include="DataAccess\PetCareContext.cs" />
     <Compile Include="DataAccess\PetCareInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -168,15 +171,65 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\font.css" />
+    <Content Include="Content\css\style.blue.css" />
+    <Content Include="Content\css\style.default.css" />
+    <Content Include="Content\css\style.green.css" />
+    <Content Include="Content\css\style.pink.css" />
+    <Content Include="Content\css\style.red.css" />
+    <Content Include="Content\css\style.sea.css" />
+    <Content Include="Content\css\style.violet.css" />
+    <Content Include="Content\fonts\dark-dashboard.svg" />
+    <Content Include="Content\img\020-pawprint.png" />
+    <Content Include="Content\img\PetCareLogo.png" />
+    <Content Include="Content\js\charts-custom.js" />
+    <Content Include="Content\js\charts-home.js" />
+    <Content Include="Content\js\front.js" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Content\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Content\vendor\chart.js\Chart.js" />
+    <Content Include="Content\vendor\chart.js\Chart.min.js" />
+    <Content Include="Content\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Content\vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="Content\vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="Content\vendor\jquery\core.js" />
+    <Content Include="Content\vendor\jquery\jquery.js" />
+    <Content Include="Content\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\fonts\dark-dashboard.eot" />
+    <Content Include="Content\fonts\dark-dashboard.ttf" />
+    <Content Include="Content\fonts\dark-dashboard.woff" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\vendor\jquery.cookie\component.json" />
+    <Content Include="Content\vendor\jquery.cookie\cookie.jquery.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -204,9 +257,20 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Pet\Index.cshtml" />
+    <Content Include="Views\Pet\Create.cshtml" />
+    <Content Include="Views\Pet\Details.cshtml" />
+    <Content Include="Views\Pet\Delete.cshtml" />
+    <Content Include="Views\Administrator\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\vendor\chart.js\docs\" />
+    <Folder Include="Content\vendor\font-awesome\less\" />
+    <Folder Include="Content\vendor\font-awesome\scss\" />
+    <Folder Include="Content\vendor\jquery.cookie\test\" />
+    <Folder Include="Views\DoctorView\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

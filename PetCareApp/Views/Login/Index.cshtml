@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/login")
+</head>
+<body>
+    <div class="container">
+
+        <div class="row" id="pwd-container">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+                <section class="login-form" action="@Url.Action("EnterSystem", "Login")" method="post">
+                    <form role="login">
+                        <img src="~/Content/img/PetCareLogo.png" />
+                        <input type="email" name="email" placeholder="Email" required class="form-control input-lg" value="joestudent@gmail.com" />
+
+                        <input type="password" name="password"class="form-control input-lg" id="password" placeholder="Password" required="" />
+
+
+                        <div class="pwstrength_viewport_progress"></div>
+
+
+                        <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+                        <div>
+                            <a href="#">Forgotten password?</a>
+                        </div>
+
+                    </form>
+                </section>
+            </div>
+
+            <div class="col-md-4"></div>
+
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
