@@ -20,23 +20,12 @@ h3 {
     margin: 0 auto;
 }
 
-    .center img {
+.center img {
         opacity: 0.5;
         display: block;
         margin: 0 auto;
-    }
-    .center img:hover {
-        
-    }/*
-.center:hover {
-   opacity: 1;
-   color: deeppink;
-    }
+}
 
-    .center:hover strong.add {
-        color: deeppink;
-        opacity: 1;
-    }*/
 .statistic-block.block:hover img{
     opacity: 1;
 }
@@ -48,3 +37,5 @@ h3 {
 .title.center a:hover {
     text-decoration: none;
 }
+
+

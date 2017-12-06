@@ -182,10 +182,12 @@
     <Content Include="Content\css\style.sea.css" />
     <Content Include="Content\css\style.violet.css" />
     <Content Include="Content\fonts\dark-dashboard.svg" />
+    <Content Include="Content\img\001-doctor.png" />
     <Content Include="Content\img\002-dog-in-front-of-a-man.png" />
     <Content Include="Content\img\004-administrator.png" />
     <Content Include="Content\img\020-pawprint.jpg" />
     <Content Include="Content\img\030-veterinarian.png" />
+    <Content Include="Content\img\doctorwhite.png" />
     <Content Include="Content\img\OwnerWhite.png" />
     <Content Include="Content\img\PawWhite.png" />
     <Content Include="Content\img\PetCareLogo.png" />

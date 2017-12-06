@@ -5,5 +5,12 @@ img.prueba {
 }
 img.prueba:hover {
     opacity: 1;
-    filter: hue-rotate(300deg)
+}
+
+img.doctor{
+    opacity: 0.3;
+}
+
+img.prueba:hover {
+    opacity: 1;
 }
