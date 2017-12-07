@@ -11,6 +11,18 @@ img.doctor{
     opacity: 0.3;
 }
 
-img.prueba:hover {
+img.doctor:hover{
+    opacity: 1;
+}
+
+img.prueba:hover{
+    opacity: 1;
+}
+
+img.prueba2{
+    opacity: 0.5;
+}
+
+img.prueba2:hover {
     opacity: 1;
 }

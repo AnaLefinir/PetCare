@@ -192,7 +192,10 @@
     <Content Include="Content\img\PawWhite.png" />
     <Content Include="Content\img\PetCareLogo.png" />
     <Content Include="Content\img\prueba.png" />
+    <Content Include="Content\img\user2.png" />
+    <Content Include="Content\img\userw.png" />
     <Content Include="Content\img\UserWhite.png" />
+    <Content Include="Content\img\UserWhite2.png" />
     <Content Include="Content\img\veterinarian.png" />
     <Content Include="Content\img\VeterinarianWhite.png" />
     <Content Include="Content\js\charts-custom.js" />
