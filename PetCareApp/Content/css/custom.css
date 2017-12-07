@@ -1,28 +1,17 @@
 /* your styles go here */
 
-img.prueba {
-    opacity: 0.5;
-}
-img.prueba:hover {
-    opacity: 1;
-}
-
 img.doctor{
-    opacity: 0.3;
-}
-
-img.doctor:hover{
-    opacity: 1;
-}
-
-img.prueba:hover{
-    opacity: 1;
-}
-
-img.prueba2{
     opacity: 0.5;
 }
 
-img.prueba2:hover {
-    opacity: 1;
+img.setopacity {
+    opacity: 0.4;
+}
+
+a.changeonhover:hover img{
+    opacity:1;
+}
+
+nav#sidebar a.changeonhover:hover {
+    color: deeppink;
 }

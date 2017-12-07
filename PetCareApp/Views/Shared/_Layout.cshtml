@@ -205,22 +205,12 @@
                 </div>
             </div><span class="heading">Main</span>
             <ul class="list-unstyled">
-                <li class="active"><a href="@Url.Action("Index", "Administrator")"> <i class="icon-home"></i>Home </a></li>
-                <li><a href="tables.html"><i><img class="doctor" src="~/Content/img/doctorwhite.png" /></i>Doctors </a></li>
-                <li><a href="@Url.Action("Index", "Pets")"> <i><img class="prueba" src="~/Content/img/020-pawprint.jpg" /></i>Pets </a></li>
-                <li><a href="forms.html"> <i class="icon-padnote"></i>Owners </a></li>
-                <li><a href="forms.html"> <i>
-    <img src="~/Content/img/user2.png" />
-</i>Users </a></li>
-                <li>
-                    <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
-                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                        <li><a href="#">Page</a></li>
-                    </ul>
-                </li>
-            <li><a href="@Url.Action("Index", "Login")"> <i class="icon-logout"></i>Login page </a></li>
+                <li class="active"><a class="changeonhover" href="@Url.Action("Index", "Administrator")"> <i><img class="setopacity" src="~/Content/img/home.png" /></i>Home </a></li>
+                <li><a class="changeonhover" href="tables.html"><i><img class="doctor" src="~/Content/img/doctorwhite.png" /></i>Doctors</a></li>
+                <li><a class="changeonhover" href="@Url.Action("Index", "Pets")"> <i><img class="setopacity" src="~/Content/img/paw.png" /></i>Pets</a></li>
+                <li><a class="changeonhover" href="forms.html"> <i><img class="setopacity" src="~/Content/img/OwnerSmall.png" /></i>Owners</a></li>
+                <li><a class="changeonhover" href="forms.html"> <i><img class="setopacity" src="~/Content/img/user2.png" /></i>Users</a></li>
+                <li><a class="changeonhover" @Url.Action("Index", "Login")><i><img class="setopacity" src="~/Content/img/logout.png" /></i>Login page </a></li>
             </ul>
         </nav>
         <div class="page-content">
@@ -291,8 +281,7 @@
             <footer class="footer">
                 <div class="footer__block block no-margin-bottom">
                     <div class="container-fluid text-center">
-                        <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        <p class="no-margin-bottom">2017 &copy; Your company. Design by <a href="https://bootstrapious.com">Bootstrapious</a>.</p>
+                        <p class="no-margin-bottom">2017 &copy; PetCare.</p>
                     </div>
                 </div>
             </footer>
