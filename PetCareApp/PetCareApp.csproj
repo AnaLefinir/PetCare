@@ -167,9 +167,9 @@
     <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\PetsController.cs" />
-    <Compile Include="Views\DoctorsController.cs" />
-    <Compile Include="Views\OwnersController.cs" />
-    <Compile Include="Views\UsersController.cs" />
+    <Compile Include="Controllers\DoctorsController.cs" />
+    <Compile Include="Controllers\OwnersController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\admin.css" />
@@ -185,6 +185,7 @@
     <Content Include="Content\css\style.sea.css" />
     <Content Include="Content\css\style.violet.css" />
     <Content Include="Content\fonts\dark-dashboard.svg" />
+    <Content Include="Content\img\DetailPink.png" />
     <Content Include="Content\img\home.png" />
     <Content Include="Content\img\001-doctor.png" />
     <Content Include="Content\img\002-dog-in-front-of-a-man.png" />

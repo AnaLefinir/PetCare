@@ -9,7 +9,7 @@ namespace PetCareApp.Models
         //UNIQUE
         public int ID { get; set; }
         public string Name { get; set; }
-        //[DataType(DataType.Date)]
+        [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
         public string Type { get; set; }
 

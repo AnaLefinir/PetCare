@@ -1,4 +1,5 @@
-﻿
+﻿@using PetCareApp.Models
+
 @{
     Layout = null;
 }
@@ -8,10 +9,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>PetCare</title>
     @Styles.Render("~/Content/AdmiIndex")
     @RenderSection("Scripts", false/*required*/)
     @RenderSection("Styles", false/*required*/)
+
+    
 </head>
 <body>
     <header class="header">
@@ -29,7 +32,7 @@
             </div>
             <div class="container-fluid d-flex align-items-center justify-content-between">
                 <div class="navbar-header">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="@Url.Action("Index", "Administrator")" class="navbar-brand">
                         <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Dark</strong><strong>Admin</strong></div>
                         <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div>
                     </a>
@@ -37,7 +40,7 @@
                 </div>
                 <ul class="right-menu list-inline no-margin-bottom">
                     <li class="list-inline-item"><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></li>
-                    <li class="list-inline-item logout"><a id="logout" href="@Url.Action("Index", "Administrator")" class="nav-link">Logout <i class="icon-logout"></i></a></li>
+                    <li class="list-inline-item logout"><a id="logout" href="@Url.Action("Index", "Login")" class="nav-link">Logout <i class="icon-logout"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -46,7 +49,7 @@
         <!-- Sidebar Navigation-->
         <nav id="sidebar">
             <div class="sidebar-header d-flex align-items-center">
-                <div class="avatar"><img src="~/Content/img/004-administrator.png" alt="Admin" class="img-fluid rounded-circle"></div><!--Cambiar imagen!!!!!!!!!-->
+                <div class="avatar"><img src="~/Content/img/004-administrator.png" alt="Admin" class="img-fluid rounded-circle"></div>
                 <div class="title">
                     <h1 class="h5">Admin</h1>
                 </div>
@@ -65,7 +68,8 @@
                 <div class="container-fluid">
                     <h2 class="h5 no-margin-bottom">Dashboard</h2>
                 </div>
-            </div><!--
+            </div>
+            <!--
             <section class="no-padding-top no-padding-bottom">
                 <div class="container-fluid">
                     <div class="row">

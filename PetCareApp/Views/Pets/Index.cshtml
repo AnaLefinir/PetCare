@@ -1,19 +1,12 @@
 ﻿@model IEnumerable<PetCareApp.Models.Pet>
 
-@{
-}
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+<div>
+    <div class="form-group row">       
+        <div class="col-lg-2 offset-8">
+            <input style="cursor:pointer" value="Create New" type="button" onclick="location.href='@Url.Action("Create", "Pets")'" class="btn btn-primary">
+        </div>
+    </div>
     <div class="block">
         <div class="title"><strong>List of Pets</strong></div>
         <table class="table table-striped table-hover">
@@ -48,15 +41,15 @@
                         @Html.DisplayFor(modelItem => item.Type)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new {id = item.ID}) |
-                        @Html.ActionLink("Details", "Details", new {id = item.ID}) |
-                        @Html.ActionLink("Delete", "Delete", new {id = item.ID})
+                        <img style="cursor:pointer" onclick="location.href='@Url.Action("Edit","Pets", new { id = item.ID })'" src="~/Content/img/003-edit.png"/> |
+                        <img style="cursor:pointer" onclick="location.href='@Url.Action("Details","Pets", new { id = item.ID })'" src="~/Content/img/DetailPink.png" /> | 
+                        <img style="cursor:pointer" onclick="location.href='@Url.Action("Delete","Pets", new { id = item.ID })'" src="~/Content/img/rubbish-bin.png" />
                     </td>
                 </tr>
             }
             </tbody>
         </table>
     </div>
-</body>
-</html>
+</div>
+
 
