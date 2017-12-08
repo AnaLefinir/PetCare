@@ -310,7 +310,6 @@
     <Folder Include="Content\vendor\font-awesome\less\" />
     <Folder Include="Content\vendor\font-awesome\scss\" />
     <Folder Include="Content\vendor\jquery.cookie\test\" />
-    <Folder Include="Views\DoctorView\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
