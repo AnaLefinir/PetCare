@@ -11,8 +11,7 @@ namespace PetCareApp.Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        [DisplayName("Birthdate")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
+        [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
