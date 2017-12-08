@@ -13,5 +13,6 @@ a.changeonhover:hover img{
 }
 
 nav#sidebar a.changeonhover:hover {
-    color: deeppink;
+    color: #DB6574 !important;
+    
 }

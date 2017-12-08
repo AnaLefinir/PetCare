@@ -10,8 +10,8 @@ h3 {
     padding-top: 25px;
 }
 
-.statistic-block strong.add{
-    color: darkorchid;
+.statistic-block strong.add {
+    color: #864DD9 !important;
     font-size: 1.3rem;
 }
 
@@ -31,7 +31,7 @@ h3 {
 }
 
 .statistic-block.block:hover strong.add {
-    color: deeppink;
+    color: #DB6574 !important;
 }
 
 .title.center a:hover {

@@ -40,9 +40,6 @@ namespace PetCareApp
 
             bundles.Add(new ScriptBundle("~/Content/jsadmi").Include(
                 "~/Content/vendor/bootstrap/js/bootstrap.min.js",
-                "~/Content/vendor/chart.js/Chart.min.js",
-                "~/Content/vendor/chart.js/Chart.min.js",
-                "~/Content/js/charts-home.js",
                 "~/Content/js/front.js"));
 
             bundles.Add(new StyleBundle("~/Content/Admin").Include(
