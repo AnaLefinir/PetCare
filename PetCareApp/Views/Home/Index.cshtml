@@ -2,63 +2,64 @@
     ViewBag.Title = "Dashboard";
 }
 
-@Styles.Render("~/Content/Admin")
+@section Styles{
+    @Styles.Render("~/Content/views/home")
+}
 
 <div class="page-header">
     <div class="container-fluid">
         <h2 class="h5 no-margin-bottom">Dashboard</h2>
     </div>
-    <div class="main">
-        <h2>Hi DarkAdmin!</h2>
+</div>
+<div class="main">
+    <h2>Hi DarkAdmin!</h2>
 
-        <h3> What do you want to do today? </h3>
+    <h3> What do you want to do today? </h3>
 
-        <section class="index">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="statistic-block block">
-                            <div class="d-flex align-items-end justify-content-between">
-                                <div class="title center">
-                                    <a href="@Url.Action("Create","Pets")"><div class="icon"><img src="~/Content/img/PawWhite.png" /></div><strong class="add">Add Pet</strong></a>
-                                </div>
+    <section class="index">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="statistic-block block">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="title center">
+                                <a href="@Url.Action("Create","Pets")"><div class="icon"><img src="~/Content/img/PawWhite.png" /></div><strong class="add">Add Pet</strong></a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="statistic-block block">
-                            <div class=" d-flex align-items-end justify-content-between">
-                                <div class="title center">
-                                    <div class="icon"><img src="~/Content/img/OwnerWhite.png" /></div><strong class="add">Add Owner</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="statistic-block block">
-                            <div class="d-flex align-items-end justify-content-between">
-                                <div class="title center">
-                                    <a href="@Url.Action("Index","Login")"><div class="icon"><img src="~/Content/img/VeterinarianWhite.png" /></div><strong class="add">Add Doctor</strong></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="statistic-block block">
-                            <div class="d-flex align-items-end justify-content-between">
-                                <div class="title center">
-                                    <div class="icon"><img class="prueba2" src="~/Content/img/userw.png" /></div><strong class="add">Add User</strong>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="statistic-block block">
+                        <div class=" d-flex align-items-end justify-content-between">
+                            <div class="title center">
+                                <div class="icon"><img src="~/Content/img/OwnerWhite.png" /></div><strong class="add">Add Owner</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="statistic-block block">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="title center">
+                                <a href="@Url.Action("Index","Login")"><div class="icon"><img src="~/Content/img/VeterinarianWhite.png" /></div><strong class="add">Add Doctor</strong></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="statistic-block block">
+                        <div class="d-flex align-items-end justify-content-between">
+                            <div class="title center">
+                                <div class="icon"><img class="prueba2" src="~/Content/img/userw.png" /></div><strong class="add">Add User</strong>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-
-    </div>
 </div>
+
