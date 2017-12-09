@@ -12,7 +12,7 @@ namespace PetCareApp.Models
         public int Matricula { get; set; }
 
         //FK:
-        public User UserId { get; set; }
+        public virtual User UserId { get; set; }
 
         public virtual ICollection<Prescription> Prescriptions { get; set; }
         public virtual ICollection<Visit> Visits { get; set; }
