@@ -52,10 +52,10 @@
                                 @Html.DisplayFor(modelItem => item.OwnerId)
                             </td>
                             <td>
-                                <img style="cursor:pointer" onclick="location.href='@Url.Action("Edit","Pets", new { id = item.ID })'" src="~/Content/img/003-edit.png" /> |
-                                <img style="cursor:pointer" onclick="location.href='@Url.Action("Details","Pets", new { id = item.ID })'" src="~/Content/img/DetailPink.png" /> |
+                                <img style="cursor:pointer" onclick="location.href='@Url.Action("Edit","Pets", new { id = item.ID })'" src="~/Content/images/003-edit.png" /> |
+                                <img style="cursor:pointer" onclick="location.href='@Url.Action("Details","Pets", new { id = item.ID })'" src="~/Content/images/DetailPink.png" /> |
                                 <div style="display: inline-block" data-toggle="modal" data-target="#@myModal">
-                                    <img style="cursor: pointer" src="~/Content/img/rubbish-bin.png" />
+                                    <img style="cursor: pointer" src="~/Content/images/rubbish-bin.png" />
                                 </div>
                                 <div id="@myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
                                     <div role="document" class="modal-dialog">
