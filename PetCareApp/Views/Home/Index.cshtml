@@ -37,23 +37,23 @@
                         </div>
                     </div>
                 </div>
-                @if (ViewBag.IsAdmin)
+                @if (true)
                 {
                     <div class="col-md-3 col-sm-6">
                         <div class="statistic-block block">
                             <div class="d-flex align-items-end justify-content-between">
                                 <div class="title center">
-                                    @if (ViewBag.Theme == "white")
-                                    {
-                                        var veterinayImg = Url.Content("~/Content/images/001-doctor.png");
-                                    }
-                                    else
-                                    {
-                                        var veterinayImg = Url.Content("~/Content/images/veterinarian.png");
+                                    @{
+                                        var veterinaryImg = Url.Content("~/Content/images/VeterinarianWhite.png");
+
+                                        if (ViewBag.Theme.Equals("white"))
+                                        {
+                                            veterinaryImg = Url.Content("~/Content/images/001-doctor.png");
+                                        }
                                     }
                                     <a href="@Url.Action("Index", "Login")">
                                         <div class="icon">
-                                            <img src="~/Content/images/@veterinaryImg" alt="image" />
+                                            <img src="@veterinaryImg" alt="image"/>
                                         </div>
                                         <div>
                                             <strong class="add">Add Doctor</strong>
