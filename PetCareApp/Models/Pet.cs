@@ -14,6 +14,6 @@ namespace PetCareApp.Models
         public string Type { get; set; }
 
         //Navigation Property from Owner's FK
-        public virtual Owner OwnerId { get; set; }
+        public virtual Owner OwnerId { get; set; }//cambiar!!!!!
     }
 }

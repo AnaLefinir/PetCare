@@ -10,11 +10,16 @@ namespace PetCareApp
         {
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                 "~/Content/bootstrap.css",
-                "~/Content/vendor/font-awesome/css/font-awesome.min.css"));
+                "~/Content/font-awesome.css"));
 
-            bundles.Add(new StyleBundle("~/Content/templates/dark").Include(
-                "~/Content/css/font.css",
-                "~/Content/css/style.default.css"
+            bundles.Add(new StyleBundle("~/Content/templates/darkadmin/dark").Include(
+                "~/Content/themes/darkadmin/css/font.css",
+                "~/Content/themes/darkadmin/css/style.dark.css"
+            ));
+
+            bundles.Add(new StyleBundle("~/Content/templates/darkadmin/white").Include(
+                "~/Content/themes/darkadmin/css/font.css",
+                "~/Content/themes/darkadmin/css/style.white.css"
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -33,8 +38,8 @@ namespace PetCareApp
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                 "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/templates/dark").Include(
-                "~/Content/js/front.js"
+            bundles.Add(new ScriptBundle("~/bundles/templates/darkadmin").Include(
+                "~/Content/themes/darkadmin/js/front.js"
             ));
             //Login view
             bundles.Add(new StyleBundle("~/Content/views/login").Include(

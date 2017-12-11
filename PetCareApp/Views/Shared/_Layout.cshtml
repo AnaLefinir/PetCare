@@ -12,7 +12,7 @@
     <title>PetCare</title>
     @Styles.Render("~/Content/bootstrap")
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700" />
-    @Styles.Render("~/Content/templates/dark")
+    @Styles.Render("~/Content/templates/darkadmin/" + ViewBag.Theme)
     
 
     @RenderSection("Styles", false/*required*/)
@@ -32,7 +32,7 @@
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/templates/dark")
+    @Scripts.Render("~/bundles/templates/darkadmin")
 
     @RenderSection("Scripts", false/*required*/)
 </body>

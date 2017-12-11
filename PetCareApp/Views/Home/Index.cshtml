@@ -23,7 +23,7 @@
                     <div class="statistic-block block">
                         <div class="d-flex align-items-end justify-content-between">
                             <div class="title center">
-                                <a href="@Url.Action("Create","Pets")"><div class="icon"><img src="~/Content/img/PawWhite.png" /></div><strong class="add">Add Pet</strong></a>
+                                <a href="@Url.Action("Create","Pets")"><div class="icon"><img src="~/Content/images/PawWhite.png" /></div><strong class="add">Add Pet</strong></a>
                             </div>
                         </div>
                     </div>
@@ -32,31 +32,24 @@
                     <div class="statistic-block block">
                         <div class=" d-flex align-items-end justify-content-between">
                             <div class="title center">
-                                <div class="icon"><img src="~/Content/img/OwnerWhite.png" /></div><strong class="add">Add Owner</strong>
+                                <div class="icon"><img src="~/Content/images/OwnerWhite.png" /></div><strong class="add">Add Owner</strong>
                             </div>
                         </div>
                     </div>
                 </div>
+                @if (ViewBag.IsAdmin)
+                {
                 <div class="col-md-3 col-sm-6">
                     <div class="statistic-block block">
                         <div class="d-flex align-items-end justify-content-between">
                             <div class="title center">
-                                <a href="@Url.Action("Index","Login")"><div class="icon"><img src="~/Content/img/VeterinarianWhite.png" /></div><strong class="add">Add Doctor</strong></a>
+                                <a href="@Url.Action("Index","Login")"><div class="icon"><img src="~/Content/images/VeterinarianWhite.png" /></div><strong class="add">Add Doctor</strong></a>
                             </div>
                         </div>
 
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="statistic-block block">
-                        <div class="d-flex align-items-end justify-content-between">
-                            <div class="title center">
-                                <div class="icon"><img class="prueba2" src="~/Content/img/userw.png" /></div><strong class="add">Add User</strong>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                </div>  
+                }
             </div>
         </div>
     </section>
