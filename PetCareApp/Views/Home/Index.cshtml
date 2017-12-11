@@ -1,9 +1,9 @@
-﻿@{
+﻿@using System.Web.Razor.Generator
+@{
     ViewBag.Title = "Dashboard";
 }
 
 @section Styles{
-    @Styles.Render("~/Content/views/home")
 }
 
 <div class="page-header">
@@ -39,16 +39,30 @@
                 </div>
                 @if (ViewBag.IsAdmin)
                 {
-                <div class="col-md-3 col-sm-6">
-                    <div class="statistic-block block">
-                        <div class="d-flex align-items-end justify-content-between">
-                            <div class="title center">
-                                <a href="@Url.Action("Index","Login")"><div class="icon"><img src="~/Content/images/VeterinarianWhite.png" /></div><strong class="add">Add Doctor</strong></a>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="statistic-block block">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="title center">
+                                    @if (ViewBag.Theme == "white")
+                                    {
+                                        var veterinayImg = Url.Content("~/Content/images/001-doctor.png");
+                                    }
+                                    else
+                                    {
+                                        var veterinayImg = Url.Content("~/Content/images/veterinarian.png");
+                                    }
+                                    <a href="@Url.Action("Index", "Login")">
+                                        <div class="icon">
+                                            <img src="~/Content/images/@veterinaryImg" alt="image" />
+                                        </div>
+                                        <div>
+                                            <strong class="add">Add Doctor</strong>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-
                     </div>
-                </div>  
                 }
             </div>
         </div>

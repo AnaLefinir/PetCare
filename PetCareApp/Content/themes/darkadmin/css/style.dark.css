@@ -6,7 +6,66 @@ Dark Admin Bootstrap Template by Bootstrapious.com
 
 ==============================================================
 ==============================================================
- */
+/*
+* ==========================================================
+*     STYLING ANITA 
+* ==========================================================
+*/
+.main {
+    padding: 15px !important;
+}
+
+.index {
+    padding-top: 100px !important;
+}
+
+h3 {
+    padding-top: 25px !important;
+}
+
+.statistic-block strong.add {
+    color: #864DD9 !important;
+    font-size: 1.3rem !important;
+}
+
+.center {
+    font-size: 20px !important;
+    margin: 0 auto !important;
+}
+
+.center img {
+  opacity: 0.5 !important;
+  display: block !important;
+   margin: 0 auto !important;
+}
+
+.statistic-block.block:hover img {
+    opacity: 1 !important;
+}
+
+.statistic-block.block:hover strong.add {
+    color: #DB6574 !important;
+}
+
+.title.center a:hover {
+    text-decoration: none !important;
+}
+
+img.doctor {
+    opacity: 0.5 !important;
+}
+
+img.setopacity {
+    opacity: 0.4 !important;
+}
+
+a.changeonhover:hover img {
+    opacity: 1 !important;
+}
+
+nav#sidebar a.changeonhover:hover {
+    color: #DB6574 !important;
+}
 /*
 * ==========================================================
 *     GENERAL STYLING 
