@@ -28,6 +28,10 @@ namespace PetCareApp.Views
         // GET: Pets/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
+            string theme = Request.QueryString["theme"];
+            ViewBag.Theme = theme ?? "dark";
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
