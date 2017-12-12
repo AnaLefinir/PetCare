@@ -14,6 +14,7 @@ namespace PetCareApp.Controllers
             ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true" ;
             string theme = Request.QueryString["theme"];
             ViewBag.Theme = theme ?? "dark";
+
             return View();
         }
     }

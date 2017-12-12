@@ -4,35 +4,32 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PetCareApp.DataAccess;
+using PetCareApp.Models;
 
 namespace PetCareApp.Controllers
 {
     public class LoginController : Controller
     {
+        private PetCareContext db = new PetCareContext();        
+        
         // GET: Login
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult EnterSystem(string email, string password)
+        [HttpPost]
+        public ActionResult DoLogin(string username, string password)
         {
-            ViewBag.email = email;
-            ViewBag.password = password;
+            User user = db.Users.FirstOrDefault(u => u.Username.Equals(username));
 
-            if (password == "doctor")
+            if (user != null && user.Password.Equals(password))
             {
-                return View();
-            }else if (password == "admi")
-            {
-                return View();
+                Session["LoggedUser"] = user;
+                return RedirectToAction("Index", "Home");
             }
-            else
-            {
-                return RedirectToAction("Index");
-            }
-
-            
+            return View("Index");
         }
     }
 }

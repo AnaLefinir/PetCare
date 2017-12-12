@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 using System.Data.Entity;
+using System.Security.Cryptography;
 using PetCareApp.Models;
 
 
@@ -20,6 +21,14 @@ namespace PetCareApp.DataAccess
             };
 
             pets.ForEach(s => context.Pets.Add(s));
+            context.SaveChanges();
+
+            var users = new List<User>
+            {
+                new User {Username = "anita", Password = "1234"}
+            };
+
+            users.ForEach(u => context.Users.Add(u));
             context.SaveChanges();
 
 
