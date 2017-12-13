@@ -62,7 +62,10 @@ img.setopacity {
 a.changeonhover:hover img {
     opacity: 1 !important;
 }
-
+a.isactive {
+    background: #34373d;
+    color: #DB6574;
+}
 nav#sidebar a.changeonhover:hover {
     color: #DB6574 !important;
 }
