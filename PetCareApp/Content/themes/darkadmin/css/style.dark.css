@@ -11,6 +11,7 @@ Dark Admin Bootstrap Template by Bootstrapious.com
 *     STYLING ANITA 
 * ==========================================================
 */
+
 .main {
     padding: 15px !important;
 }
@@ -21,6 +22,10 @@ Dark Admin Bootstrap Template by Bootstrapious.com
 
 h3 {
     padding-top: 25px !important;
+}
+
+.text {
+    padding-left: 30px;
 }
 
 .statistic-block strong.add {
@@ -36,7 +41,7 @@ h3 {
 .center img {
   opacity: 0.5 !important;
   display: block !important;
-   margin: 0 auto !important;
+  margin: 0 auto !important;
 }
 
 .statistic-block.block:hover img {
@@ -66,8 +71,15 @@ a.isactive {
     background: #34373d;
     color: #DB6574;
 }
+a:hover {
+    text-decoration: none;
+}
 nav#sidebar a.changeonhover:hover {
     color: #DB6574 !important;
+}
+
+.setMargin {
+    margin-top: 30px;
 }
 /*
 * ==========================================================
@@ -215,6 +227,7 @@ pre {
   background: #2d3035;
   color: #8a8d93;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .page-content {
@@ -2691,10 +2704,6 @@ a {
   text-decoration: none;
 }
 
-a:focus, a:hover {
-  color: #c52e41;
-  text-decoration: underline;
-}
 
 h1,
 h2,

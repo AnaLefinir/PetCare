@@ -178,6 +178,15 @@
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\doctor-white.png" />
+    <Content Include="Content\images\doctor-white.svg" />
+    <Content Include="Content\images\doctor.svg" />
+    <Content Include="Content\images\dog-in-front-of-a-man-white.svg" />
+    <Content Include="Content\images\dog-in-front-of-a-man.svg" />
+    <Content Include="Content\images\pawprint.svg" />
+    <Content Include="Content\images\pawprintwhite.svg" />
+    <Content Include="Content\images\veterinarian-white.svg" />
+    <Content Include="Content\images\veterinarian.svg" />
     <Content Include="Content\views\home.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />

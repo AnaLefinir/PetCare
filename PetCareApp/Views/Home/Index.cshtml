@@ -12,48 +12,76 @@
     </div>
 </div>
 <div class="main">
-    <h2>Hi DarkAdmin!</h2>
+    <div class="text">
+        <h2>Hi PetCare's Admin!</h2>
 
-    <h3> What do you want to do today? </h3>
-
+        <h3> What do you want to do today? </h3>
+    </div>
     <section class="index">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="statistic-block block">
                         <div class="d-flex align-items-end justify-content-between">
                             <div class="title center">
-                                <a href="@Url.Action("Create","Pets")"><div class="icon"><img src="~/Content/images/PawWhite.png" /></div><strong class="add">Add Pet</strong></a>
+                                @{
+                                    var petImg = Url.Content("~/Content/images/pawprintwhite.svg");
+
+                                    if (ViewBag.Theme.Equals("white"))
+                                    {
+                                        petImg = Url.Content("~/Content/images/pawprint.svg");
+                                    }
+                                }
+                                <a href="@Url.Action("Create", "Pets")">
+                                    <div class="icon">
+                                        <img src="@petImg" alt="imagePet" />
+                                    </div><strong class="add">Add Pet</strong>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="statistic-block block">
                         <div class=" d-flex align-items-end justify-content-between">
                             <div class="title center">
-                                <div class="icon"><img src="~/Content/images/OwnerWhite.png" /></div><strong class="add">Add Owner</strong>
+                                @{
+                                    var ownerImg = Url.Content("~/Content/images/dog-in-front-of-a-man-white.svg");
+
+                                    if (ViewBag.Theme.Equals("white"))
+                                    {
+                                        ownerImg = Url.Content("~/Content/images/dog-in-front-of-a-man.svg");
+                                    }
+                                }
+                                <a href="@Url.Action("Create", "Owners")">
+                                    <div class="icon">
+                                        <img src=@ownerImg alt="imageOwner" />
+                                    </div>
+                                    <div>
+                                        <strong class="add">Add Owner</strong>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 @if (true)
                 {
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="statistic-block block">
                             <div class="d-flex align-items-end justify-content-between">
                                 <div class="title center">
                                     @{
-                                        var veterinaryImg = Url.Content("~/Content/images/VeterinarianWhite.png");
+                                        var veterinaryImg = Url.Content("~/Content/images/veterinarian-white.svg");
 
                                         if (ViewBag.Theme.Equals("white"))
                                         {
-                                            veterinaryImg = Url.Content("~/Content/images/001-doctor.png");
+                                            veterinaryImg = Url.Content("~/Content/images/veterinarian.svg");
                                         }
                                     }
-                                    <a href="@Url.Action("Index", "Login")">
+                                    <a href="@Url.Action("Create", "Doctors")">
                                         <div class="icon">
-                                            <img src="@veterinaryImg" alt="image"/>
+                                            <img src="@veterinaryImg" alt="imageDoctor" />
                                         </div>
                                         <div>
                                             <strong class="add">Add Doctor</strong>
@@ -67,6 +95,5 @@
             </div>
         </div>
     </section>
-
 </div>
 
