@@ -10,7 +10,8 @@ namespace PetCareApp.Models
     {
         [Key, ForeignKey("Pet")]
         public int Id { get; set; }
-        
+
+        [Required]
         public virtual Pet Pet{ get; set; }
         public virtual List<Visit> Visits { get; set; }
     }

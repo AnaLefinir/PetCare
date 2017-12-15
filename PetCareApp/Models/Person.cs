@@ -25,6 +25,6 @@ namespace PetCareApp.Models
         public string Address { get; set; }
         public int Phone { get; set; }
         [EmailAddress]
-        public string Email { get; set; }
+        public virtual string Email { get; set; }
     }
 }

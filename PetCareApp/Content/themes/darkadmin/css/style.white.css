@@ -20,7 +20,9 @@ Dark Admin Bootstrap Template by Bootstrapious.com
 .main {
     padding: 15px !important;
 }
-
+h3 {
+    padding-top: 25px;
+}
 .fa-long-arrow-right:before {
     color: #fff;
 }

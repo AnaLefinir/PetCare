@@ -15,7 +15,7 @@ namespace PetCareApp.DataAccess
         {
         }
 
-        public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Vet> Vets { get; set; }
         public DbSet<Media> Medias { get; set; }
         public DbSet<MedicalHistory> MedicalHistory { get; set; }
         public DbSet<Owner> Owners { get; set; }

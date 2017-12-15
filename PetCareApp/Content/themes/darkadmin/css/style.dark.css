@@ -21,7 +21,7 @@ Dark Admin Bootstrap Template by Bootstrapious.com
 }
 
 h3 {
-    padding-top: 25px !important;
+    padding-top: 25px;
 }
 
 .text {
@@ -56,7 +56,7 @@ h3 {
     text-decoration: none !important;
 }
 
-img.doctor {
+img.vet {
     opacity: 0.5 !important;
 }
 

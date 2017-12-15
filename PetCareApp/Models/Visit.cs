@@ -18,7 +18,7 @@ namespace PetCareApp.Models
         public double VisitPrice { get; set; }
         
         public virtual MedicalHistory MedicalHistory { get; set; }
-        public virtual Doctor Doctor { get; set; }
+        public virtual Vet Vet { get; set; }
         public virtual ICollection<Media> Media { get; set; }
     }
 }

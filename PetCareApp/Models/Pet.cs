@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace PetCareApp.Models
 {
     public class Pet
@@ -19,9 +21,18 @@ namespace PetCareApp.Models
         public bool Neutered { get; set; }
         [MaxLength(500)]
         public string Description { get; set; }
- 
+
+        [Display(Name = "Species")]
+        [ForeignKey("Species")]
+        public int SpeciesId { get; set; }
+        [Display(Name = "Owner")]
+        [ForeignKey("Owner")]
+        public int OwnerId { get; set; }
+        
         public virtual MedicalHistory MedicalHistory { get; set; }
+        [Required]
         public virtual Species Species { get; set; }
+        [Required]
         public virtual Owner Owner { get; set; }
     }
 }

@@ -79,18 +79,44 @@
                                             veterinaryImg = Url.Content("~/Content/images/veterinarian.svg");
                                         }
                                     }
-                                    <a href="@Url.Action("Create", "Doctors")">
+                                    <a href="@Url.Action("Create", "Vets")">
                                         <div class="icon">
-                                            <img src="@veterinaryImg" alt="imageDoctor" />
+                                            <img src="@veterinaryImg" alt="imageVet" />
                                         </div>
                                         <div>
-                                            <strong class="add">Add Doctor</strong>
+                                            <strong class="add">Add Vet</strong>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="statistic-block block">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="title center">
+                                    @{
+                                        var speciesImg = Url.Content("~/Content/images/veterinarian-white.svg");
+
+                                        if (ViewBag.Theme.Equals("white"))
+                                        {
+                                            speciesImg = Url.Content("~/Content/images/veterinarian.svg");
+                                        }
+                                    }
+                                    <a href="@Url.Action("Create", "Species")">
+                                        <div class="icon">
+                                            <img src="@speciesImg" alt="imageSpecies" />
+                                        </div>
+                                        <div>
+                                            <strong class="add">Add Species</strong>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 }
             </div>
         </div>

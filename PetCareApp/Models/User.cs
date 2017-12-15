@@ -15,5 +15,7 @@ namespace PetCareApp.Models
         [Required]
         [MaxLength(10)]
         public string Password { get; set; }
+        [Required]
+        public bool IsAdmin { get; set; }
     }
 }
