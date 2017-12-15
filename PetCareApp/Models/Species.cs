@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+using System.Linq;
+using System.Web;
 
 namespace PetCareApp.Models
 {
-    public class User
+    public class Species
     {
         public int Id { get; set; }
-        [Required]
-        [EmailAddress]
-        public string Username { get; set; }
-        [Required]
-        [MaxLength(10)]
-        public string Password { get; set; }
+        public string Name { get; set; }
     }
 }

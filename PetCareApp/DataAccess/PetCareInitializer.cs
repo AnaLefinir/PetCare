@@ -13,19 +13,27 @@ namespace PetCareApp.DataAccess
     {
         protected override void Seed(PetCareContext context)
         {
-            var pets = new List<Pet>
+            var species = new List<Species>
             {
-                    new Pet {Name="Crookshanks", Birthdate=DateTime.Parse("2004-10-28"), Type="Cat" },
-                    new Pet {Name="Foxie", Birthdate=DateTime.Parse("2005-02-08"), Type="Dog" },
-                    new Pet {Name="Juana", Birthdate=DateTime.Parse("2004-10-28"), Type="Dog" }
+                new Species {Name="Cat"},
+                new Species {Name="Dog"},
+                new Species {Name="Lemur"}
             };
+            species.ForEach(s => context.Species.Add(s));
+            context.SaveChanges();
 
-            pets.ForEach(s => context.Pets.Add(s));
+            Owner ana = new Owner { FirstName = "Ana", LastName = "Lefinir", Birthdate = new DateTime(1981, 04, 20), DNI = 34333254, Address = "Av. Corrientes 5514", Genre = Genre.Female, Phone = 1122521580, Email = "analefinir@gmail.com" };
+            var owners = new List<Owner>
+            {
+                ana
+            };
+            
+            owners.ForEach(s => context.Owners.Add(s));
             context.SaveChanges();
 
             var users = new List<User>
             {
-                new User {Username = "anita", Password = "1234"}
+                new User {Username = "anita@gmail.com", Password = "1234"}
             };
 
             users.ForEach(u => context.Users.Add(u));

@@ -6,10 +6,7 @@ namespace PetCareApp.Models
 {
     public class Media
     {   
-        //UNIQUE
-        public int ID { get; set; }
-
-        //FK:
-        public virtual Visit VisitId { get; set; }
+        public int Id { get; set; }
+        public string Path { get; set; }
     }
 }

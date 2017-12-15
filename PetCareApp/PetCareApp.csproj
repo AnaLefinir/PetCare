@@ -152,7 +152,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="DataAccess\PetCareContext.cs" />
@@ -161,19 +160,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Media.cs" />
     <Compile Include="Models\MedicalHistory.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Pet.cs" />
-    <Compile Include="Models\Prescription.cs" />
+    <Compile Include="Models\Species.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\PetsController.cs" />
-    <Compile Include="Controllers\DoctorsController.cs" />
-    <Compile Include="Controllers\OwnersController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />
@@ -294,28 +290,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Administrator\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Pets\Create.cshtml" />
-    <Content Include="Views\Pets\Delete.cshtml" />
-    <Content Include="Views\Pets\Details.cshtml" />
-    <Content Include="Views\Pets\Edit.cshtml" />
-    <Content Include="Views\Pets\Index.cshtml" />
-    <Content Include="Views\Doctors\Create.cshtml" />
-    <Content Include="Views\Doctors\Delete.cshtml" />
-    <Content Include="Views\Doctors\Details.cshtml" />
-    <Content Include="Views\Doctors\Edit.cshtml" />
-    <Content Include="Views\Doctors\Index.cshtml" />
-    <Content Include="Views\Owners\Create.cshtml" />
-    <Content Include="Views\Owners\Delete.cshtml" />
-    <Content Include="Views\Owners\Details.cshtml" />
-    <Content Include="Views\Owners\Edit.cshtml" />
-    <Content Include="Views\Owners\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Shared\_SideBar.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
