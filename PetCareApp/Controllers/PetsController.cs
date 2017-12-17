@@ -29,6 +29,10 @@ namespace PetCareApp.Controllers
         // GET: Pets/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
+            string theme = Request.QueryString["theme"];
+            ViewBag.Theme = theme ?? "dark";
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -77,6 +81,10 @@ namespace PetCareApp.Controllers
         // GET: Pets/Edit/5
         public ActionResult Edit(int? id)
         {
+            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
+            string theme = Request.QueryString["theme"];
+            ViewBag.Theme = theme ?? "dark";
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

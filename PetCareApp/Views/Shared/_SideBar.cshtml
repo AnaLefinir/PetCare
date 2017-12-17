@@ -15,14 +15,36 @@
         </div>
     </div><span class="heading">Main</span>
     <ul class="list-unstyled">
-        <li><a class="changeonhover" href="@Url.Action("Index", "Home")"> <i><img class="setopacity" src="~/Content/images/home.png" /></i>Home</a></li>
-        <li><a class="changeonhover" href="@Url.Action("Index", "Pets")"> <i><img class="setopacity" src="~/Content/images/paw.png" /></i>Pets</a></li>
-        <li><a class="changeonhover" href="@Url.Action("Index", "Owners")"> <i><img class="setopacity" src="~/Content/images/OwnerSmall.png" /></i>Owners</a></li>
-        @if (true)
-        {
-            <li><a class="changeonhover" href="@Url.Action("Index", "Vets")"> <i><img class="setopacity" src="~/Content/images/user2.png" /></i>Vets</a></li>
-            <li><a class="changeonhover" href="@Url.Action("Index", "Species")"> <i><img class="setopacity" src="~/Content/images/user2.png" /></i>Species</a></li>
+        @{
+            var homeIcon = Url.Content("~/Content/images/home-icon-white.svg");
+            var petIcon = Url.Content("~/Content/images/paw-white.svg");
+            var ownerIcon = Url.Content("~/Content/images/dog-in-front-of-a-man-white.svg");
+            var vetIcon = Url.Content("~/Content/images/veterinarian-white.svg");
+            var speciesIcon = Url.Content("~/Content/images/species-white.svg");
+            var logoutIcon = Url.Content("~/Content/images/logout-icon-white.svg");
+
+
+            if (ViewBag.Theme.Equals("white"))
+            {
+                homeIcon = Url.Content("~/Content/images/home-icon-black.svg");
+                petIcon = Url.Content("~/Content/images/paw-black.svg");
+                ownerIcon = Url.Content("~/Content/images/dog-in-front-of-a-man-black.svg");
+                vetIcon = Url.Content("~/Content/images/veterinarian-black.svg");
+                speciesIcon = Url.Content("~/Content/images/species-black.svg");
+                logoutIcon = Url.Content("~/Content/images/logout-icon-black.svg");
+            }
+
+            <li><a class="changeonhover" href="@Url.Action("Index", "Home")"> <i><img class="setopacity" src="@homeIcon" /></i>Home</a></li>
+            <li><a class="changeonhover" href="@Url.Action("Index", "Pets")"> <i><img class="setopacity header-size" src="@petIcon" /></i>Pets</a></li>
+            <li><a class="changeonhover" href="@Url.Action("Index", "Owners")"> <i><img class="setopacity header-size" src="@ownerIcon" /></i>Owners</a></li>
+            if (true)
+            {
+                <li><a class="changeonhover" href="@Url.Action("Index", "Vets")"> <i><img class="setopacity header-size" src="@vetIcon" /></i>Vets</a></li>
+                <li><a class="changeonhover" href="@Url.Action("Index", "Species")"> <i><img class="setopacity header-size" src="@speciesIcon" /></i>Species</a></li>
+            }
+
+            <li><a class="changeonhover" href="@Url.Action("Index", "Login")"><i><img class="setopacity header-size" src="@logoutIcon" /></i>Login page </a></li>
         }
-        <li><a class="changeonhover" href="@Url.Action("Index", "Login")"><i><img class="setopacity" src="~/Content/images/logout.png" /></i>Login page </a></li>
     </ul>
 </nav>
+

@@ -74,6 +74,25 @@ strong.add {
 .setMargin {
     margin-top: 30px;
 }
+
+img.setopacity {
+    opacity: 0.4;
+}
+
+a.changeonhover:hover img {
+    opacity: 1;
+}
+
+img.header-size {
+    height: 26px;
+    width: 26px;
+}
+
+.logout-header {
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+}
 /*
 * ==========================================================
 *     GENERAL STYLING 
@@ -826,7 +845,7 @@ nav#sidebar {
             nav#sidebar li a:hover {
                 background: #34373d;
                 background: #bbeebb;
-                border-left: 4px solid #22773c;
+                /*if is active border-left: 4px solid #22773c;*/
                 color: #441144;
             }
 

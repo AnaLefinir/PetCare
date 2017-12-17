@@ -25,11 +25,11 @@
                         <div class="d-flex align-items-end justify-content-between">
                             <div class="title center">
                                 @{
-                                    var petImg = Url.Content("~/Content/images/pawprintwhite.svg");
+                                    var petImg = Url.Content("~/Content/images/paw-white.svg");
 
                                     if (ViewBag.Theme.Equals("white"))
                                     {
-                                        petImg = Url.Content("~/Content/images/pawprint.svg");
+                                        petImg = Url.Content("~/Content/images/paw-black.svg");
                                     }
                                 }
                                 <a href="@Url.Action("Create", "Pets")">
@@ -50,7 +50,7 @@
 
                                     if (ViewBag.Theme.Equals("white"))
                                     {
-                                        ownerImg = Url.Content("~/Content/images/dog-in-front-of-a-man.svg");
+                                        ownerImg = Url.Content("~/Content/images/dog-in-front-of-a-man-black.svg");
                                     }
                                 }
                                 <a href="@Url.Action("Create", "Owners")">
@@ -76,7 +76,7 @@
 
                                         if (ViewBag.Theme.Equals("white"))
                                         {
-                                            veterinaryImg = Url.Content("~/Content/images/veterinarian.svg");
+                                            veterinaryImg = Url.Content("~/Content/images/veterinarian-black.svg");
                                         }
                                     }
                                     <a href="@Url.Action("Create", "Vets")">
@@ -97,11 +97,11 @@
                             <div class="d-flex align-items-end justify-content-between">
                                 <div class="title center">
                                     @{
-                                        var speciesImg = Url.Content("~/Content/images/veterinarian-white.svg");
+                                        var speciesImg = Url.Content("~/Content/images/species-white.svg");
 
                                         if (ViewBag.Theme.Equals("white"))
                                         {
-                                            speciesImg = Url.Content("~/Content/images/veterinarian.svg");
+                                            speciesImg = Url.Content("~/Content/images/species-black.svg");
                                         }
                                     }
                                     <a href="@Url.Action("Create", "Species")">
