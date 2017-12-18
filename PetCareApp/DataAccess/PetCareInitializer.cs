@@ -26,8 +26,8 @@ namespace PetCareApp.DataAccess
             species.ForEach(s => context.Species.Add(s));
             context.SaveChanges();
 
-            Owner ana = new Owner { FirstName = "Ana", LastName = "Lefinir", Birthdate = new DateTime(1981, 04, 20), DNI = 34333254, Address = "Av. Corrientes 5514", Genre = Genre.Female, Phone = 1122521580, Email = "analefinir@gmail.com" };
-            Owner marin = new Owner { FirstName = "Mariana", LastName = "Ballesteros", Birthdate = new DateTime(1981, 05, 17), DNI = 34333254, Address = "Thompson 680", Genre = Genre.Female, Phone = 1122521580, Email = "marin@gmail.com" };
+            Owner ana = new Owner { FirstName = "Ana", LastName = "Lefinir", Birthdate = new DateTime(1981, 04, 20), DNI = 34333254, Address = "Av. Corrientes 5514", Genre = Genre.Female, Phone = "1122521580", Email = "analefinir@gmail.com" };
+            Owner marin = new Owner { FirstName = "Mariana", LastName = "Ballesteros", Birthdate = new DateTime(1981, 05, 17), DNI = 34333254, Address = "Thompson 680", Genre = Genre.Female, Phone = "1122521580", Email = "marin@gmail.com" };
 
             var owners = new List<Owner>
             {
@@ -50,7 +50,7 @@ namespace PetCareApp.DataAccess
 
             var vets = new List<Vet>
             {
-                new Vet {FirstName = "Leandro", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "lIglesias@gmail.com", Genre = Genre.Male, Phone = 998855, DNI = 29631590, Address = "Mendoza 565", License = 23556, Password = "Puchun13"}
+                new Vet {FirstName = "Leandro", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "lIglesias@gmail.com", Genre = Genre.Male, Phone = "998855", DNI = 29631590, Address = "Mendoza 565", License = 23556, Password = "Puchun13"}
             };
 
             vets.ForEach(u => context.Vets.Add(u));

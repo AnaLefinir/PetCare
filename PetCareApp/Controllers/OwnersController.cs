@@ -18,7 +18,6 @@ namespace PetCareApp.Controllers
         // GET: Owners
         public ActionResult Index()
         {
-
             return View(db.Owners.ToList());
         }
 

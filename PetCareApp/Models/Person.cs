@@ -23,7 +23,7 @@ namespace PetCareApp.Models
         public Genre Genre { get; set; }
         [MaxLength(50)]
         public string Address { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
         [EmailAddress]
         public virtual string Email { get; set; }
     }
