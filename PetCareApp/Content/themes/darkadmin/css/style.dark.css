@@ -96,6 +96,24 @@ img.header-size {
     height: 30px;
     padding-left: 10px;
 }
+
+.infoImg {
+    float: left;
+    margin-top: 30px;
+}
+    .infoImg img {
+        height: 100px;
+        width: 100px;
+    }
+.info {
+    margin-left: 140px;
+}
+
+.infoContainer {
+    height: 194px;
+    min-width: 356px;
+}
+
 /*
 * ==========================================================
 *     GENERAL STYLING 

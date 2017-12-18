@@ -50,7 +50,7 @@ namespace PetCareApp.DataAccess
 
             var vets = new List<Vet>
             {
-                new Vet {FirstName = "Leandro", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "lIglesias@gmail.com", Genre = Genre.Male, Phone = "998855", DNI = 29631590, Address = "Mendoza 565", License = 23556, Password = "Puchun13"}
+                new Vet {FirstName = "Leandro", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "lIglesias@gmail.com", Genre = Genre.Male, Phone = "998855", DNI = 29631590, Address = "Mendoza 565", License = 23556, Password = "Puchun13" }
             };
 
             vets.ForEach(u => context.Vets.Add(u));

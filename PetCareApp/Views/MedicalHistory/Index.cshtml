@@ -5,19 +5,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>CreateVisit</h2>
+<div class="container-fluid">
+    <div class="row">
+        @Html.Partial("_PetInfo", Model)
+        @Html.Partial("_OwnerInfo", Model)
+    </div>
+    <div class="row">
+        @if (!Model.IsCreate)
+        {
+            <div class="btn"></div>
+        }
+    </div>
+    <div class="row">
+        <div class="form">
 
-@Model.PetName (@Model.PetId)
-
-@if (Model.IsCreate)
-{
-    <p>Hola Miguel!</p>
-}
-else
-{
-    <p>A la grande le puse cuca</p>
-}
-
-@Html.Partial("_PetInfo", Model)
-@Html.Partial("_OwnerInfo", Model)
-@Html.Partial("_VisitList", Model)
+        </div>
+        @Html.Partial("_VisitList", Model)
+    </div>
+</div>

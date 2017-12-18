@@ -1,4 +1,26 @@
 ﻿@model PetCareApp.ModelView.MedicalHistory.MedicalHistoryModel
 
-
-<p>Owner Info</p>
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+    <div class="infoContainer block">
+        <div class="infoImg">
+            @{
+                var genre = Model.OwnerGenre;
+                if (ViewBag.Theme == "dark")
+                {
+                    <img class="sizeInfo" src="~/Content/images/@genre-white.svg" />
+                }
+                else
+                {
+                    <img class="sizeInfo" src="~/Content/images/@genre-black.svg" />
+                }
+            }
+        </div>
+        <div class="info">
+            <h3>Owner Info</h3>
+            <ul>
+                <li> Name = @Model.OwnerName, </li>
+                <li> Phone = @Model.OwnerPhone.</li>
+            </ul>
+        </div>
+    </div>
+</div>

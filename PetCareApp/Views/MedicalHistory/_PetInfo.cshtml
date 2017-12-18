@@ -1,4 +1,35 @@
-﻿@model PetCareApp.ModelView.MedicalHistory.MedicalHistoryModel
-    
+﻿@using System.Web.Services.Protocols
+@model PetCareApp.ModelView.MedicalHistory.MedicalHistoryModel
 
-<p>Pet Info</p>
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="display: inline-block">
+    <div class="infoContainer block">
+        <div class="infoImg">
+            @{
+                var species = "paw";
+
+                if (@Model.PetSpecies != null)
+                {
+                    species = @Model.PetSpecies;
+                }
+
+                if (ViewBag.Theme == "dark")
+                {
+                    <img class="sizeInfo setopacity" src="~/Content/images/@species-white.svg"/>// TODO: Crear la clase!!!y ponerla en los dos theme.
+                }
+                else
+                {
+                    <img class="sizeInfo setopacity" src="~/Content/images/@species-black.svg"/>
+                }
+
+            }
+        </div>
+        <div class="info">
+            <h3>Pet Info</h3>
+            <ul>
+                <li>Name : @Model.PetName,</li>
+                <li> Age : @Model.PetAge,</li>
+                <li>Genre : @Model.PetGenre.</li>
+            </ul>
+        </div>
+    </div>
+</div>

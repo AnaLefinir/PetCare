@@ -17,6 +17,7 @@ namespace PetCareApp.Models
         [StringLength(18, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [RegularExpression(@"^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)).+$")]
         public string Password { get; set; }
+        public bool IsAdmin { get; set; }// TODO: Cambiar el view, para q tenga este campo!!!
         /*[NotMapped]
         [Display(Name = "Confirm Password")]
         [Required(ErrorMessage = "Confirm Password is required")]
