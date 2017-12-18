@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Web;
 
-namespace PetCareApp.Models
+namespace PetCareApp.ModelView.MedicalHistory
 {
-    public class Visit
+    public class MedicalHistoryActualVisitModel
     {
         public int Id { get; set; }
         [DataType(DataType.Date)]
@@ -16,8 +17,5 @@ namespace PetCareApp.Models
         [MaxLength(500)]
         public string Description { get; set; }
         public double VisitPrice { get; set; }
-        
-        public virtual MedicalHistory MedicalHistory { get; set; }
-        public virtual Vet Vet { get; set; }
     }
 }
