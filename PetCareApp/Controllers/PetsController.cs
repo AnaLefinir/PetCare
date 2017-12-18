@@ -18,10 +18,6 @@ namespace PetCareApp.Controllers
         // GET: Pets
         public ActionResult Index()
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             var pets = db.Pets.Include(p => p.MedicalHistory).Include(p => p.Owner).Include(p => p.Species);
             return View(pets.ToList());
         }
@@ -29,10 +25,6 @@ namespace PetCareApp.Controllers
         // GET: Pets/Details/5
         public ActionResult Details(int? id)
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -48,10 +40,6 @@ namespace PetCareApp.Controllers
         // GET: Pets/Create
         public ActionResult Create()
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             ViewBag.Id = new SelectList(db.MedicalHistory, "Id", "Id");
             ViewBag.OwnerId = new SelectList(db.Owners, "Id", "FirstName");
             ViewBag.SpeciesId = new SelectList(db.Species, "Id", "Name");
@@ -81,10 +69,6 @@ namespace PetCareApp.Controllers
         // GET: Pets/Edit/5
         public ActionResult Edit(int? id)
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -122,10 +106,6 @@ namespace PetCareApp.Controllers
         // GET: Pets/Delete/5
         public ActionResult Delete(int? id)
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

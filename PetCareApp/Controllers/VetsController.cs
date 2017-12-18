@@ -18,10 +18,6 @@ namespace PetCareApp.Controllers
         // GET: Vets
         public ActionResult Index()
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             return View(db.Vets.ToList());
         }
 
@@ -43,10 +39,6 @@ namespace PetCareApp.Controllers
         // GET: Vets/Create
         public ActionResult Create()
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             return View();
         }
 
@@ -55,7 +47,7 @@ namespace PetCareApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,License,Email,FirstName,LastName,DNI,Birthdate,Genre,Address,Phone")] Vet vet)
+        public ActionResult Create([Bind(Include = "Id,License,Email,Password,FirstName,LastName,DNI,Birthdate,Genre,Address,Phone")] Vet vet)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +79,7 @@ namespace PetCareApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,License,Email,FirstName,LastName,DNI,Birthdate,Genre,Address,Phone")] Vet vet)
+        public ActionResult Edit([Bind(Include = "Id,License,Email,Password,FirstName,LastName,DNI,Birthdate,Genre,Address,Phone")] Vet vet)
         {
             if (ModelState.IsValid)
             {
@@ -101,10 +93,6 @@ namespace PetCareApp.Controllers
         // GET: Vets/Delete/5
         public ActionResult Delete(int? id)
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

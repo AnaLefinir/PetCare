@@ -48,21 +48,9 @@ namespace PetCareApp.DataAccess
             pets.ForEach(s => context.Pets.Add(s));
             context.SaveChanges();
 
-            User user1 = new User { Username = "anita@gmail.com", Password = "1234", IsAdmin = true};
-            User user2 = new User { Username = "liglesias@gmail.com", Password = "1122", IsAdmin = false};
-
-            var users = new List<User>
-            {
-                user1,
-                user2
-            };
-
-            users.ForEach(u => context.Users.Add(u));
-            context.SaveChanges();
-
             var vets = new List<Vet>
             {
-                new Vet {FirstName = "Leandro", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "lIglesias@gmail.com", Genre = Genre.Male, Phone = 998855, DNI = 29631590, Address = "Mendoza 565", License = 23556, User = user2}
+                new Vet {FirstName = "Leandro", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "lIglesias@gmail.com", Genre = Genre.Male, Phone = 998855, DNI = 29631590, Address = "Mendoza 565", License = 23556, Password = "Puchun13"}
             };
 
             vets.ForEach(u => context.Vets.Add(u));

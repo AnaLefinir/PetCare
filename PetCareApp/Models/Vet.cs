@@ -13,7 +13,17 @@ namespace PetCareApp.Models
         [EmailAddress, Required]
         public override string Email { get; set; }
         [Required]
-        public virtual User User { get; set; }
+        [DataType(DataType.Password)]
+        [StringLength(18, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [RegularExpression(@"^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)).+$")]
+        public string Password { get; set; }
+        /*[NotMapped]
+        [Display(Name = "Confirm Password")]
+        [Required(ErrorMessage = "Confirm Password is required")]
+        [DataType(DataType.Password)]
+        [Compare("Password")]
+        public string ConfirmPassword { get; set; }*/
+
         public virtual ICollection<Visit> Visits { get; set; }
     }
 }

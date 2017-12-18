@@ -18,10 +18,6 @@ namespace PetCareApp.Controllers
         // GET: Species
         public ActionResult Index()
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             return View(db.Species.ToList());
         }
 
@@ -43,10 +39,6 @@ namespace PetCareApp.Controllers
         // GET: Species/Create
         public ActionResult Create()
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             return View();
         }
 
@@ -101,10 +93,6 @@ namespace PetCareApp.Controllers
         // GET: Species/Delete/5
         public ActionResult Delete(int? id)
         {
-            ViewBag.IsAdmin = Request.QueryString["isAdmin"] == "true";
-            string theme = Request.QueryString["theme"];
-            ViewBag.Theme = theme ?? "dark";
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

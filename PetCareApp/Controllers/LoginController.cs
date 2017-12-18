@@ -20,13 +20,13 @@ namespace PetCareApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult DoLogin(string username, string password)
+        public ActionResult DoLogin(string email, string password)
         {
-            User user = db.Users.FirstOrDefault(u => u.Username.Equals(username));
+            Vet vet = db.Vets.FirstOrDefault(u => u.Email.Equals(email));
 
-            if (user != null && user.Password.Equals(password))
+            if (vet != null && vet.Password.Equals(password))
             {
-                Session["LoggedUser"] = user;
+                Session["LoggedUser"] = vet;
                 return RedirectToAction("Index", "Home");
             }
             return View("Index");
