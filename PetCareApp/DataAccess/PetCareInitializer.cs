@@ -55,6 +55,12 @@ namespace PetCareApp.DataAccess
 
             vets.ForEach(u => context.Vets.Add(u));
             context.SaveChanges();
+
+            var visits = new List<Visit>
+            {
+                new Visit{},
+                new Visit{}
+            };
         }
     }
 }
