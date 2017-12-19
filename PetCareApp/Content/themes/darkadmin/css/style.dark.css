@@ -109,6 +109,10 @@ img.header-size {
     margin-left: 140px;
 }
 
+    .info h3 {
+        color: #864DD9;
+    }
+
 .infoContainer {
     height: 194px;
     min-width: 356px;

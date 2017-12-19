@@ -38,6 +38,10 @@ namespace PetCareApp
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                 "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/chart").Include(
+                "~/Scripts/chart.js"
+                ));
+
             bundles.Add(new ScriptBundle("~/bundles/templates/darkadmin").Include(
                 "~/Content/themes/darkadmin/js/front.js"
             ));
@@ -48,7 +52,12 @@ namespace PetCareApp
             //Home view
             bundles.Add(new StyleBundle("~/Content/views/home").Include(
                 "~/Content/views/home.css"));
-           
+
+            bundles.Add(new ScriptBundle("~/bundles/home").Include(
+                "~/Scripts/app/income-chart.js",
+                "~/Scripts/app/species-chart.js"
+            ));
+
         }
     }
 }

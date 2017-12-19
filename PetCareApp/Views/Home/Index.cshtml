@@ -14,7 +14,6 @@
 <div class="main">
     <div class="text">
         <h2>Hi PetCare's Admin!</h2>
-
         <h3> What do you want to do today? </h3>
     </div>
     <section class="index">
@@ -119,7 +118,88 @@
 
                 }
             </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <canvas id="myIncomeChart" width="400" height="400"></canvas>
+                </div>
+                <div class="col-lg-6">
+                    <canvas id="mySpeciesChart" width="400" height="400"></canvas>
+                </div>
+            </div>
         </div>
     </section>
 </div>
 
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/chart")
+    @Scripts.Render("~/bundles/home")
+}
+
+<script>
+    var incomeChartData = {
+        type: 'bar',
+        data: {
+            labels: ["January", "February", "March", "April"],
+            datasets: [
+                {
+                    label: 'Income',
+                    data: [12, 19, 3, 5],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }
+                ]
+            }
+        }
+    };
+
+    var speciesChartData = {
+        type: 'pie',
+        data: {
+            labels: ["Cat", "Dog", "Lemur", "Rat"],
+            datasets: [
+                {
+                    label: 'Species',
+                    data: [38, 22, 20, 20],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ]
+                }
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    };
+</script>
