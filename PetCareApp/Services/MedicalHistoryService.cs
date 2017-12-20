@@ -47,10 +47,36 @@ namespace PetCareApp.Services
         public MedicalHistoryModel GetEditVisitModel(int visitId)
         {
             MedicalHistoryModel model = new MedicalHistoryModel();
-            model.PetName = "Puchun";
-            model.Visit = new MedicalHistoryActualVisitModel();
-            model.Visit.Id = visitId;
+
             model.IsCreate = false;
+
+            var visitToEdit = db.Visits.Find(visitId);
+            var pet = visitToEdit.MedicalHistory.Pet;
+
+            model.PetId = pet.Id;
+            model.PetName = pet.Name;
+            model.PetGenre = pet.Genre;
+            model.PetAge = GetAge(pet.Birthdate);
+            model.PetSpecies = pet.Species.Name;
+            // 3. Obtener al objeto Ownwer asociado al Pet.
+            var owner = pet.Owner;
+            // 4. Asociar los campos requeridos por el model, con los obtenidos del Owner.
+            model.OwnerId = owner.Id;
+            model.OwnerName = $"{owner.FirstName} {owner.LastName}";// String Interpolation
+            model.OwnerGenre = owner.Genre;
+            model.OwnerPhone = owner.Phone;
+            // 5. Crear un objeto de tipo MedicalHistoryActualVisitModel vacio.
+            model.Visit = new MedicalHistoryActualVisitModel();
+            // 6. Traer las Visits asocidas al Pet.
+            List<Visit> visits = pet.MedicalHistory.Visits;
+            // 7. Mapear de Visit a MedicalHistoryVisitModel y Agregarlo el mapeo a la lista de Visits.
+            model.Visits = visits.Select(visit => MapVisit(visit)).ToList();
+
+            model.Visit.Id = visitToEdit.Id;
+            model.Visit.VisitDate = visitToEdit.VisitDate;
+            model.Visit.Title = visitToEdit.Title;
+            model.Visit.Description = visitToEdit.Description;
+            model.Visit.VisitPrice = visitToEdit.VisitPrice;
 
             return model;
         }
@@ -68,6 +94,17 @@ namespace PetCareApp.Services
         private int GetAge(DateTime petBirthdate)
         {
             return DateTime.Now.Year - petBirthdate.Year;
+        }
+
+        public void CreateVisit(int petId, MedicalHistoryActualVisitModel visit)
+        {
+            
+        }
+
+        public void EditVisit(MedicalHistoryActualVisitModel visit)
+        {
+            
+
         }
     }
 }

@@ -9,7 +9,6 @@ using PetCareApp.Models;
 
 namespace PetCareApp.Controllers
 {
-    [AllowAnonymous]
     public class LoginController : Controller
     {
         private PetCareContext db = new PetCareContext();        

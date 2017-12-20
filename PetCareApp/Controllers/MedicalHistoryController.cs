@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PetCareApp.Filters;
+using PetCareApp.Models;
+using PetCareApp.ModelView.MedicalHistory;
 using PetCareApp.Services;
 
 namespace PetCareApp.Controllers
@@ -26,18 +28,15 @@ namespace PetCareApp.Controllers
 
         // POST: MedicalHistory/CreateVisit/{PetId}
         [HttpPost]
-        public ActionResult CreateVisit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateVisit(int id, [Bind(Include = "VisitDate, Title, Description, VisitPrice")] MedicalHistoryActualVisitModel visit)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
+                _medicalHistoryService.CreateVisit(id, visit);
+            }
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("CreateVisit", new { id = id });
         }
 
         // GET: MedicalHistory/EditVisit/{VisitId}
@@ -48,20 +47,17 @@ namespace PetCareApp.Controllers
             return View("Index", model);
         }
 
-        // POST: MedicalHistory/EditVisit/{VisitId}
+        // POST: MedicalHistory/EditVisit/{petId}
         [HttpPost]
-        public ActionResult EditVisit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult EditVisit(int id, [Bind(Include = "Id, VisitDate, Title, Description, VisitPrice")] MedicalHistoryActualVisitModel visit)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
+                _medicalHistoryService.EditVisit(visit);
+            }
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("CreateVisit", new {id = id});
         }
         
         // POST: MedicalHistory/DeleteVisit/{VisitId}

@@ -7,10 +7,12 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PetCareApp.DataAccess;
+using PetCareApp.Filters;
 using PetCareApp.Models;
 
 namespace PetCareApp.Controllers
 {
+    [AdminAuthorizationFilter]
     public class SpeciesController : Controller
     {
         private PetCareContext db = new PetCareContext();
