@@ -17,6 +17,26 @@ namespace PetCareApp.DataAccess
             Species dog = new Species { Name = "Dog" };
             Species lemur = new Species { Name = "Lemur" };
 
+            Owner ana = new Owner { FirstName = "Ana", LastName = "Lefinir", Birthdate = new DateTime(1981, 04, 20), DNI = 34333254, Address = "Av. Corrientes 5514", Genre = Genre.Female, Phone = "1122521580", Email = "analefinir@gmail.com" };
+            Owner marin = new Owner { FirstName = "Mariana", LastName = "Ballesteros", Birthdate = new DateTime(1981, 05, 17), DNI = 34333254, Address = "Thompson 680", Genre = Genre.Female, Phone = "1122521580", Email = "marin@gmail.com" };
+
+            MedicalHistory medicalhistoryofpuchun = new MedicalHistory();
+
+            var puchun = new Pet
+            {
+                Name = "Crookshanks",
+                Birthdate = new DateTime(2003, 10, 24),
+                Genre = Genre.Female,
+                Weight = "5.2kg",
+                Neutered = true,
+                Description = "La gata mas hermosa sobre la faz de esta Tierra y cualquier Terra",
+                Owner = ana,
+                Species = cat,
+                MedicalHistory = medicalhistoryofpuchun
+            };
+
+
+
             var species = new List<Species>
             {
                 cat,
@@ -26,9 +46,7 @@ namespace PetCareApp.DataAccess
             species.ForEach(s => context.Species.Add(s));
             context.SaveChanges();
 
-            Owner ana = new Owner { FirstName = "Ana", LastName = "Lefinir", Birthdate = new DateTime(1981, 04, 20), DNI = 34333254, Address = "Av. Corrientes 5514", Genre = Genre.Female, Phone = "1122521580", Email = "analefinir@gmail.com" };
-            Owner marin = new Owner { FirstName = "Mariana", LastName = "Ballesteros", Birthdate = new DateTime(1981, 05, 17), DNI = 34333254, Address = "Thompson 680", Genre = Genre.Female, Phone = "1122521580", Email = "marin@gmail.com" };
-
+            
             var owners = new List<Owner>
             {
                 ana,
@@ -38,9 +56,10 @@ namespace PetCareApp.DataAccess
             owners.ForEach(s => context.Owners.Add(s));
             context.SaveChanges();
 
+            
             var pets = new List<Pet>
             {
-                new Pet {Name="Crookshanks", Birthdate = new DateTime(2003, 10, 24), Genre = Genre.Female, Weight = "5.2kg", Neutered = true, Description = "La gata mas hermosa sobre la faz de esta Tierra y cualquier Terra", Owner = ana, Species = cat},
+                puchun,
                 new Pet {Name="Mel", Birthdate = new DateTime(2003, 10, 24), Genre = Genre.Female, Weight = "5.2kg", Neutered = true, Description = "La hermana de la gata mas hermosa sobre la faz de esta Tierra y cualquier Terra", Owner = marin, Species = cat},
                 new Pet {Name="Blanqui", Birthdate = new DateTime(2000, 5, 13), Genre = Genre.Male, Weight = "5kg", Neutered = true, Description = "Pequeño cachorro de leon", Owner = marin, Species = cat}
             };
@@ -55,12 +74,17 @@ namespace PetCareApp.DataAccess
 
             vets.ForEach(u => context.Vets.Add(u));
             context.SaveChanges();
+            
 
             var visits = new List<Visit>
             {
-                new Visit{},
-                new Visit{}
+                new Visit{ VisitDate = new DateTime(2017,4, 15), Title = "First Visit", Description = "First visit of Puchun. She is well.", VisitPrice = 80, MedicalHistory = medicalhistoryofpuchun},
+                new Visit{ VisitDate = new DateTime(2017,8, 15), Title = "Vanucation Anual", Description = "Vacunation.", VisitPrice = 120, MedicalHistory = medicalhistoryofpuchun},
+                new Visit{ VisitDate = new DateTime(2017,11, 15), Title = "Revision", Description = "Revision.", VisitPrice = 80, MedicalHistory = medicalhistoryofpuchun}
             };
+
+            visits.ForEach(u => context.Visits.Add(u));
+            context.SaveChanges();
         }
     }
 }

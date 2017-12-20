@@ -32,5 +32,13 @@ namespace PetCareApp.Controllers
             }
             return View("Index");
         }
+
+        
+        public ActionResult DoLogout()
+        {
+            Session["LoggedUser"] = null;
+
+            return RedirectToAction("Index");
+        }
     }
 }

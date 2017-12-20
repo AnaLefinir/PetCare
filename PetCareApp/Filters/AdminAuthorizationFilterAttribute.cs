@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PetCareApp.Models;
 
 namespace PetCareApp.Filters
 {
@@ -10,10 +11,15 @@ namespace PetCareApp.Filters
     {
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
-            base.OnAuthorization(filterContext);
+            var user = filterContext.HttpContext.Session["LoggedUser"];
+            if (user == null)
+            {
+                filterContext.Result = new RedirectResult("~/Login/Index");
+                
+                return;
+            }
             
-            // TODO: Hay que customizar de acuerdo al usuario
-            filterContext.Controller.ViewBag.IsAdmin = filterContext.HttpContext.Request.QueryString["isAdmin"] == "true";
+            filterContext.Controller.ViewBag.IsAdmin = ((Vet) user).IsAdmin;
         }
     }
 }

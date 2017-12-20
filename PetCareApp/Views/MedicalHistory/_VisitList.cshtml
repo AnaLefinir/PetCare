@@ -14,7 +14,7 @@
             <tbody>
             @foreach (var item in Model.Visits){
                 <tr>
-                    <td>@Html.DisplayFor(modelItem => item.TimeStamp)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TimeStamp)</td> <!-- TODO: pasar solo la fecha!! -->
                     <td>@Html.DisplayFor(modelItem => item.Title)</td>
                 </tr>
             }

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Security.Policy;
 using System.Web;
 using System.Web.Mvc;
+using PetCareApp.Filters;
 
 namespace PetCareApp.Controllers
 {
+    [AdminAuthorizationFilter]
     public class HomeController : Controller
     {
         public ActionResult Index()

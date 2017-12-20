@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PetCareApp.Filters;
 using PetCareApp.Services;
 
 namespace PetCareApp.Controllers
 {
+    [AdminAuthorizationFilter]
     public class MedicalHistoryController : Controller
     {
         private MedicalHistoryService _medicalHistoryService = new MedicalHistoryService();

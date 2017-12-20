@@ -10,8 +10,6 @@ namespace PetCareApp
         {
             filters.Add(new HandleErrorAttribute());
             filters.Add(new ThemeActionFilterAttribute());
-            //filters.Add(new AuthorizeAttribute());
-            //filters.Add(new AdminAuthorizationFilterAttribute());
         }
     }
 }
