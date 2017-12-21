@@ -192,10 +192,14 @@
     <Content Include="Content\images\home-icon-white.svg" />
     <Content Include="Content\images\logout-icon-black.svg" />
     <Content Include="Content\images\logout-icon-white.svg" />
+    <Content Include="Content\images\black-moon-theme.svg" />
+    <Content Include="Content\images\white-moon-theme.svg" />
     <Content Include="Content\images\paw-black.svg" />
     <Content Include="Content\images\paw-white.svg" />
     <Content Include="Content\images\species-black.svg" />
     <Content Include="Content\images\species-white.svg" />
+    <Content Include="Content\images\black-sun-theme.svg" />
+    <Content Include="Content\images\white-sun-theme.svg" />
     <Content Include="Content\images\veterinarian-black.svg" />
     <Content Include="Content\images\veterinarian-white.svg" />
     <Content Include="Content\views\home.css" />
