@@ -55,7 +55,7 @@ namespace PetCareApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                _medicalHistoryService.EditVisit(visit);
+                _medicalHistoryService.EditVisit(id, visit);
             }
 
             return RedirectToAction("CreateVisit", new {id = id});

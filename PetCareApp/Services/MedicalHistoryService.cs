@@ -99,13 +99,34 @@ namespace PetCareApp.Services
 
         public void CreateVisit(int petId, int vetId, MedicalHistoryActualVisitModel visit)
         {
-            
+            var newVisit = new Visit();
+            var pet = db.Pets.Find(petId);
+            var vet = db.Vets.Find(vetId);
+
+            newVisit.VisitDate = visit.VisitDate;
+            newVisit.Title = visit.Title;
+            newVisit.Description = visit.Description;
+            newVisit.VisitPrice = visit.VisitPrice;
+            newVisit.MedicalHistory = pet.MedicalHistory;
+            newVisit.Vet = vet;
+
+            db.Visits.Add(newVisit);
+            db.SaveChanges();
         }
 
-        public void EditVisit(MedicalHistoryActualVisitModel visit)
+        public void EditVisit(int petId, MedicalHistoryActualVisitModel visit)
         {
-            
+            var pet = db.Pets.Find(petId);
+            int visitId = visit.VisitId;
 
+            var visitToEdit = pet.MedicalHistory.Visits.FirstOrDefault(p => p.Id == visitId);
+
+            visitToEdit.VisitDate = visit.VisitDate;
+            visitToEdit.Title = visit.Title;
+            visitToEdit.Description = visit.Description;
+            visitToEdit.VisitPrice = visit.VisitPrice;
+
+            db.SaveChanges();
         }
     }
 }
