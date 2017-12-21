@@ -18,13 +18,13 @@ namespace PetCareApp.Controllers
         public ActionResult Index()
         {
             //  https://msdn.microsoft.com/en-us/library/jj592907(v=vs.113).aspx
-           var speciesChartItems = db.SpeciesChartItems.SqlQuery(
+           /*var speciesChartItems = db.SpeciesChartItems.SqlQuery(
                     "SELECT s.Name AS Name, COUNT(p.Id) AS Count FROM Pet p INNER JOIN Species s ON p.SpeciesId = s.Id GROUP BY s.Name")
                 .ToList();
             var homeModel = new HomeModel();
-            homeModel.SpeciesChartItems = speciesChartItems;
+            homeModel.SpeciesChartItems = speciesChartItems;*/
 
-            return View(homeModel);
+            return View();
         }
 
         public ActionResult ChangeTheme(string theme, string url)
