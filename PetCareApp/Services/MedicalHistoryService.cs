@@ -97,7 +97,7 @@ namespace PetCareApp.Services
             return DateTime.Now.Year - petBirthdate.Year;
         }
 
-        public void CreateVisit(int petId, MedicalHistoryActualVisitModel visit)
+        public void CreateVisit(int petId, int vetId, MedicalHistoryActualVisitModel visit)
         {
             
         }

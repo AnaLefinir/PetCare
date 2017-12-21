@@ -164,6 +164,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IncomeChartItem.cs" />
+    <Compile Include="Models\SpeciesChartItem.cs" />
     <Compile Include="Models\Vet.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MedicalHistory.cs" />
@@ -172,6 +174,7 @@
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\Species.cs" />
     <Compile Include="Models\Visit.cs" />
+    <Compile Include="ModelView\Home\HomeModel.cs" />
     <Compile Include="ModelView\MedicalHistory\MedicalHistoryActualVisitModel.cs" />
     <Compile Include="ModelView\MedicalHistory\MedicalHistoryModel.cs" />
     <Compile Include="ModelView\MedicalHistory\MedicalHistoryVisitModel.cs" />

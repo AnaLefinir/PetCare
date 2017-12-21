@@ -33,8 +33,8 @@ namespace PetCareApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                
-                _medicalHistoryService.CreateVisit(id, visit);
+                int vetId = ((Vet) Session["LoggedUser"]).Id;
+                _medicalHistoryService.CreateVisit(id, vetId, visit);
             }
 
             return RedirectToAction("CreateVisit", new { id = id });
