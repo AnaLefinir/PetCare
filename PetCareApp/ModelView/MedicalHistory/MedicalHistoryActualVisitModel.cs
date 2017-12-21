@@ -9,6 +9,7 @@ namespace PetCareApp.ModelView.MedicalHistory
     public class MedicalHistoryActualVisitModel
     {
         public int VisitId { get; set; }
+        public int PetId { get; set; }
         [DataType(DataType.Date)]
         public DateTime VisitDate { get; set; }
         [Required]

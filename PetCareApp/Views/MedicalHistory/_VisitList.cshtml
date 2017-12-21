@@ -1,5 +1,8 @@
 ﻿@model PetCareApp.ModelView.MedicalHistory.MedicalHistoryModel
 
+@{
+    Model.Visits = Model.Visits.OrderByDescending(v => v.TimeStamp).ToList();
+}
 
 <div class="col-lg-6">
     <div class="block">
@@ -15,7 +18,7 @@
                 @foreach (var item in Model.Visits)
                 {
                     <tr>
-                        <td><a href="@Url.Action("EditVisit", "MedicalHistory", new { id=item.Id })">@item.TimeStamp.ToShortDateString()</a></td> <!-- TODO: pasar solo la fecha!! -->
+                        <td>@item.TimeStamp.ToShortDateString()</td> 
                         <td><a href="@Url.Action("EditVisit", "MedicalHistory", new { id=item.Id })">@Html.DisplayFor(modelItem => item.Title)</a></td>
                     </tr>
                 }

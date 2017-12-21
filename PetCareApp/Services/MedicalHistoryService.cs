@@ -128,5 +128,16 @@ namespace PetCareApp.Services
 
             db.SaveChanges();
         }
+
+        public void DeleteVisit(int visitId, MedicalHistoryActualVisitModel visit)
+        {
+            var visitToDelete = db.Visits.Find(visitId);
+            /*int petId = visitToDelete.MedicalHistory.Pet.Id;
+            
+            db.Pets.Find(petId).MedicalHistory.Visits.Remove(visitToDelete);*/
+            visit.
+            db.Visits.Remove(visitToDelete);
+            db.SaveChanges();
+        }
     }
 }
