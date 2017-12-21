@@ -9,11 +9,11 @@ namespace PetCareApp.Filters
 {
     public class ThemeActionFilterAttribute : ActionFilterAttribute
     {
-        private string DefaultTheme = "dark";
+        private string DefaultTheme = "dark";// TODO: Cambiar a white!
 
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            string theme = filterContext.HttpContext.Request.QueryString["theme"];
+            string theme = (string)filterContext.HttpContext.Session["theme"];
             filterContext.Controller.ViewBag.Theme = theme ?? DefaultTheme;
         }
     }

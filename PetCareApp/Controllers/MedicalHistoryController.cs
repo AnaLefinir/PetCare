@@ -33,6 +33,7 @@ namespace PetCareApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 _medicalHistoryService.CreateVisit(id, visit);
             }
 
@@ -50,7 +51,7 @@ namespace PetCareApp.Controllers
         // POST: MedicalHistory/EditVisit/{petId}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditVisit(int id, [Bind(Include = "Id, VisitDate, Title, Description, VisitPrice")] MedicalHistoryActualVisitModel visit)
+        public ActionResult EditVisit(int id, [Bind(Include = "VisitId, VisitDate, Title, Description, VisitPrice")] MedicalHistoryActualVisitModel visit)
         {
             if (ModelState.IsValid)
             {

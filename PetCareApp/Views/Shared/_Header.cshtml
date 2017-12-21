@@ -31,7 +31,8 @@
                 <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
             </div>
             <ul class="right-menu list-inline no-margin-bottom">
-
+                <a href="@Url.Action("ChangeTheme","Home", new{theme = "dark", url = Request.Url.PathAndQuery })">Dark</a> <!-- TODO: En teoria da url en la que esta parado-->
+                <a href="@Url.Action("ChangeTheme","Home", new{theme = "white", url = Request.Url.PathAndQuery })">White</a>
                 <li class="list-inline-item logout"><a id="logout" href="@Url.Action("DoLogout", "Login")" class="nav-link">Logout <img class="logout-header" src="~/Content/images/logout-icon-white.svg" /> </a></li>
 
                 <!--<li class="list-inline-item"><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></li>-->

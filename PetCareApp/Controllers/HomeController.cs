@@ -15,5 +15,15 @@ namespace PetCareApp.Controllers
         {
             return View();
         }
+
+        public ActionResult ChangeTheme(string theme, string url)
+        {
+            if (theme != null)
+            {
+                Session["theme"] = theme;
+            }
+
+            return new RedirectResult(url);
+        }
     }
 }

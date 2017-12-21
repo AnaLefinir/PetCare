@@ -36,6 +36,7 @@ namespace PetCareApp.Services
             model.OwnerPhone = owner.Phone;
             // 5. Crear un objeto de tipo MedicalHistoryActualVisitModel vacio.
             model.Visit = new MedicalHistoryActualVisitModel();
+            model.Visit.VisitDate = DateTime.Now;
             // 6. Traer las Visits asocidas al Pet.
             List<Visit> visits = pet.MedicalHistory.Visits;
             // 7. Mapear de Visit a MedicalHistoryVisitModel y Agregarlo el mapeo a la lista de Visits.
@@ -72,7 +73,7 @@ namespace PetCareApp.Services
             // 7. Mapear de Visit a MedicalHistoryVisitModel y Agregarlo el mapeo a la lista de Visits.
             model.Visits = visits.Select(visit => MapVisit(visit)).ToList();
 
-            model.Visit.Id = visitToEdit.Id;
+            model.Visit.VisitId = visitToEdit.Id;
             model.Visit.VisitDate = visitToEdit.VisitDate;
             model.Visit.Title = visitToEdit.Title;
             model.Visit.Description = visitToEdit.Description;
