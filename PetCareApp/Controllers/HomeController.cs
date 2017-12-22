@@ -8,6 +8,8 @@ using PetCareApp.DataAccess;
 using PetCareApp.Filters;
 using PetCareApp.Models;
 using PetCareApp.ModelView.Home;
+using WebGrease.Css.Extensions;
+using System.Data.Entity;
 
 namespace PetCareApp.Controllers
 {
@@ -43,6 +45,21 @@ namespace PetCareApp.Controllers
             }
 
             return new RedirectResult(url);
+        }
+
+        public ActionResult Search()
+        {
+            var model = new SearchModel();
+            model.SearchItems = new List<PetSearchItem>();
+            // TODO: https://stackoverflow.com/questions/4544756/using-include-in-entity-framework-4-with-lambda-expressions
+            db.Pets.Include(p => p.Owner).ForEach(p =>
+                model.SearchItems.Add(new PetSearchItem()
+                {
+                    PetId = p.Id,
+                    Description = $"{p.Name} ({p.Owner.FirstName} {p.Owner.LastName})"
+                }));
+
+            return View(model);
         }
     }
 }

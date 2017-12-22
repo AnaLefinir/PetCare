@@ -57,6 +57,7 @@ namespace PetCareApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                pet.MedicalHistory = new MedicalHistory();
                 db.Pets.Add(pet);
                 db.SaveChanges();
                 return RedirectToAction("Index");

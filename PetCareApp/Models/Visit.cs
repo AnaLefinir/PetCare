@@ -16,8 +16,10 @@ namespace PetCareApp.Models
         [MaxLength(500)]
         public string Description { get; set; }
         public double VisitPrice { get; set; }
-        
+
+        [Required]
         public virtual MedicalHistory MedicalHistory { get; set; }
+        [Required]
         public virtual Vet Vet { get; set; }
     }
 }

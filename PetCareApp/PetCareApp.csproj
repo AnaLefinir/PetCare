@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201712211923463_InitialCreate.Designer.cs">
       <DependentUpon>201712211923463_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712220515268_New Configuration.cs" />
+    <Compile Include="Migrations\201712220515268_New Configuration.Designer.cs">
+      <DependentUpon>201712220515268_New Configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IncomeChartItem.cs" />
     <Compile Include="Models\SpeciesChartItem.cs" />
@@ -180,6 +184,8 @@
     <Compile Include="Models\Species.cs" />
     <Compile Include="Models\Visit.cs" />
     <Compile Include="ModelView\Home\HomeModel.cs" />
+    <Compile Include="ModelView\Home\PetSearchItem.cs" />
+    <Compile Include="ModelView\Home\SearchModel.cs" />
     <Compile Include="ModelView\MedicalHistory\MedicalHistoryActualVisitModel.cs" />
     <Compile Include="ModelView\MedicalHistory\MedicalHistoryModel.cs" />
     <Compile Include="ModelView\MedicalHistory\MedicalHistoryVisitModel.cs" />
@@ -338,6 +344,7 @@
     <Content Include="Views\MedicalHistory\_VisitList.cshtml" />
     <Content Include="Views\Home\_IncomeChart.cshtml" />
     <Content Include="Views\Home\_SpeciesChart.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -356,6 +363,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712211923463_InitialCreate.resx">
       <DependentUpon>201712211923463_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712220515268_New Configuration.resx">
+      <DependentUpon>201712220515268_New Configuration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

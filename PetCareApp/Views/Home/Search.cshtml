@@ -1,0 +1,16 @@
+﻿@model PetCareApp.ModelView.Home.SearchModel
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<ul>
+    @{
+        foreach (var item in Model.SearchItems)
+        {
+            <li>@item.PetId @item.Description</li>
+        }
+    }
+</ul>
+

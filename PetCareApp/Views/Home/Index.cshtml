@@ -77,7 +77,7 @@
                                         visitImg = Url.Content("~/Content/images/paw-black.svg");
                                     }
                                 }
-                                <a href="#"><!-- TODO: crear el search!-->
+                                <a href="@Url.Action("Search", "Home")"><!-- TODO: crear el search!-->
                                     <div class="icon">
                                         <img src="@visitImg" alt="visitImg" />
                                     </div>
@@ -205,11 +205,11 @@
     var speciesChartData = {
         type: 'pie',
         data: {
-            labels: ["Cat", "Dog", "Lemur", "Rat"],
+            labels: [@Html.Raw(String.Join(",", Model.SpeciesChartItems.Select(x => $"\"{x.Name}\"")))],
             datasets: [
                 {
                     label: 'Species',
-                    data: [38, 22, 20, 20],
+                    data: [@String.Join(",", Model.SpeciesChartItems.Select(x => x.Count))],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
