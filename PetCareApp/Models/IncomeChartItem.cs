@@ -8,6 +8,7 @@ namespace PetCareApp.Models
 {
     public class IncomeChartItem
     {
+        public int Year { get; set; }
         public int Month { get; set; }
         public double Income { get; set; }
     }

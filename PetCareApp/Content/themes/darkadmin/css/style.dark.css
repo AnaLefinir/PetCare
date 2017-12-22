@@ -16,10 +16,6 @@ Dark Admin Bootstrap Template by Bootstrapious.com
     padding: 15px !important;
 }
 
-.index {
-    padding-top: 100px !important;
-}
-
 h3 {
     padding-top: 25px;
 }
@@ -284,7 +280,6 @@ pre {
     padding: 20px 15px;
     background: #2d3035;
     color: #8a8d93;
-    margin-bottom: 30px;
 }
 
 .footer {

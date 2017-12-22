@@ -13,7 +13,7 @@
     <div class="row">
         @if (!Model.IsCreate)
         {
-            <button type="submit" class="btn btn-primary"> Add Visit </button>// TODO: Hacer el boton!
+            <a class="btn btn-primary"> Add Visit </a>// TODO: Hacer el boton!
         }
     </div>
     <div class="row">
@@ -75,14 +75,10 @@
                                     string button = "Save Visit";
                                     if (!Model.IsCreate)
                                     {
-                                        var myModal = "myModal" + @Model.Visit.VisitId;
-
-                                        <button class="btn btn-danger" data-toggle="modal" data-target="@myModal">Delete Visit</button>
                                         button = "Save changes";
-                                        
                                     }
                                 }
-                                <button type="submit" class="btn btn-primary">@button</button>
+                                <button type="submit" class="btn btn-primary" >@button</button>
                             </div>
                         </div>
                     </form>

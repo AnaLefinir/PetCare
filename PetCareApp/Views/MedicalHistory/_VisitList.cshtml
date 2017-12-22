@@ -20,6 +20,7 @@
                     <tr>
                         <td>@item.TimeStamp.ToShortDateString()</td> 
                         <td><a href="@Url.Action("EditVisit", "MedicalHistory", new { id=item.Id })">@Html.DisplayFor(modelItem => item.Title)</a></td>
+                        <td><a href="@Url.Action("DeleteVisit", "MedicalHistory", new {id = item.Id, petId = Model.PetId})">X</a></td>
                     </tr>
                 }
             </tbody>

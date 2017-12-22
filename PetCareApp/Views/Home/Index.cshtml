@@ -90,8 +90,9 @@
                     </div>
                 </div>
 
-                @if (true)
+                @if (ViewBag.IsAdmin)
                 {
+                    @*
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="statistic-block block">
                             <div class="d-flex align-items-end justify-content-between">
@@ -116,7 +117,7 @@
                             </div>
                         </div>
                     </div>
-
+                    *@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="statistic-block block">
                             <div class="d-flex align-items-end justify-content-between">
@@ -167,11 +168,11 @@
     var incomeChartData = {
         type: 'bar',
         data: {
-            labels: ["January", "February", "March", "April"],
+            labels: [@Html.Raw(String.Join(",", Model.IncomeChartItems.Select(x => $"\"{x.Month}/{x.Year}\"")))].reverse(),
             datasets: [
                 {
                     label: 'Income',
-                    data: [12, 19, 3, 5],
+                    data: [@String.Join(",", Model.IncomeChartItems.Select(x => x.Income))].reverse(),
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',

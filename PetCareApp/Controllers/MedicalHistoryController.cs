@@ -62,13 +62,12 @@ namespace PetCareApp.Controllers
         }
 
         // POST: MedicalHistory/DeleteVisit/{VisitId}
-
-        [HttpPost]
-        public ActionResult DeleteVisit(int id, [Bind(Include = "PetId")] MedicalHistoryActualVisitModel visit)
+        
+        public ActionResult DeleteVisit(int id, int petId)
         {
-            _medicalHistoryService.DeleteVisit(id, visit);
+            _medicalHistoryService.DeleteVisit(id);
             
-            return RedirectToAction("CreateVisit", new {id = id});// TODO: No se como pasarle el id del pet. No funciono con un input hidden...
+            return RedirectToAction("CreateVisit", new {id = petId});
         }
     }
 }

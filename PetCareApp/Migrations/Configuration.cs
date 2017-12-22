@@ -17,10 +17,16 @@ namespace PetCareApp.Migrations
 
         protected override void Seed(PetCareApp.DataAccess.PetCareContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            
+            // TODO: https://stackoverflow.com/questions/28635377/ef6-run-update-database-command-without-seeds
+            if (context.Vets.Any())
+            {
+                return;
+            }
+              //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+                //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+                //  to avoid creating duplicate seed data.
             Species cat = new Species { Name = "Cat" };
             Species dog = new Species { Name = "Dog" };
             Species lemur = new Species { Name = "Lemur" };
@@ -51,7 +57,7 @@ namespace PetCareApp.Migrations
                 dog,
                 lemur
             };
-            species.ForEach(s => context.Species.Add(s));
+            species.ForEach(s => context.Species.AddOrUpdate(s));
             context.SaveChanges();
 
 
@@ -61,7 +67,7 @@ namespace PetCareApp.Migrations
                 marin
             };
 
-            owners.ForEach(s => context.Owners.Add(s));
+            owners.ForEach(s => context.Owners.AddOrUpdate(s));
             context.SaveChanges();
 
 
@@ -72,15 +78,16 @@ namespace PetCareApp.Migrations
                 new Pet {Name="Blanqui", Birthdate = new DateTime(2000, 5, 13), Genre = Genre.Male, Weight = "5kg", Neutered = true, Description = "Pequeño cachorro de leon", Owner = marin, Species = cat}
             };
 
-            pets.ForEach(s => context.Pets.Add(s));
+            pets.ForEach(s => context.Pets.AddOrUpdate(s));
             context.SaveChanges();
 
             var vets = new List<Vet>
             {
-                new Vet {FirstName = "Leandro", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "lIglesias@gmail.com", Genre = Genre.Male, Phone = "998855", DNI = 29631590, Address = "Mendoza 565", License = 23556, Password = "Puchun13" }
+                new Vet {FirstName = "Leandro", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "liglesias@gmail.com", Genre = Genre.Male, Phone = "998855", DNI = 29631590, Address = "Mendoza 565", License = 23556, Password = "Puchun13", IsAdmin = true},
+                new Vet {FirstName = "Gloria", LastName = "Iglesias", Birthdate = new DateTime(1989, 5, 13), Email = "giglesias@gmail.com", Genre = Genre.Female, Phone = "998855", DNI = 29631591, Address = "Mendoza 565", License = 23553, Password = "Puchun", IsAdmin = false}
             };
 
-            vets.ForEach(u => context.Vets.Add(u));
+            vets.ForEach(u => context.Vets.AddOrUpdate(u));
             context.SaveChanges();
 
 
@@ -91,7 +98,7 @@ namespace PetCareApp.Migrations
                 new Visit{ VisitDate = new DateTime(2017,11, 15), Title = "Revision", Description = "Revision.", VisitPrice = 80, MedicalHistory = medicalhistoryofpuchun}
             };
 
-            visits.ForEach(u => context.Visits.Add(u));
+            visits.ForEach(u => context.Visits.AddOrUpdate(u));
             context.SaveChanges();
         }
     }
