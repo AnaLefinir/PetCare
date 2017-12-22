@@ -23,7 +23,31 @@
     @Html.Partial("_Header")
     <div class="d-flex align-items-stretch">
         @Html.Partial("_SideBar")
-        <div class="page-content">
+        <div class="page-content isSearch">
+            @{
+                if (ViewBag.Title == "Search" && ViewBag.Theme == "dark")
+                {
+                    <style>
+                        .isSearch {
+                            background-image: url(http://localhost:50491/Content/images/paw-white.svg);
+                            background-repeat: no-repeat;
+                            background-position: bottom right;
+                            background-size: 350px;
+                        }
+                    </style>
+                }
+                else if (ViewBag.Title == "Search" && ViewBag.Theme == "white")
+                {
+                    <style>
+                        .isSearch {
+                            background-image: url(http://localhost:50491/Content/images/paw-black.svg);
+                            background-repeat: no-repeat;
+                            background-position: bottom right;
+                            background-size: 350px;
+                        }
+                    </style>
+                }
+            }
             @RenderBody()
         </div>
         @Html.Partial("_Footer")

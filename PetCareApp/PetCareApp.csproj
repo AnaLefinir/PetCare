@@ -201,15 +201,22 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\images\black-Female-icon.svg" />
     <Content Include="Content\images\black-Male-icon.svg" />
+    <Content Include="Content\images\Cat-black.svg" />
+    <Content Include="Content\images\Cat-white.svg" />
     <Content Include="Content\images\delete-icon-red.svg" />
+    <Content Include="Content\images\Dog-black.svg" />
     <Content Include="Content\images\dog-in-front-of-a-man-white.svg" />
     <Content Include="Content\images\dog-in-front-of-a-man-black.svg" />
     <Content Include="Content\images\edit-icon-green.svg" />
+    <Content Include="Content\images\Ferret-black.svg" />
+    <Content Include="Content\images\Ferret-white.svg" />
     <Content Include="Content\images\home-icon-black.svg" />
     <Content Include="Content\images\home-icon-white.svg" />
     <Content Include="Content\images\logout-icon-black.svg" />
     <Content Include="Content\images\logout-icon-white.svg" />
     <Content Include="Content\images\black-moon-theme.svg" />
+    <Content Include="Content\images\Rat-black.svg" />
+    <Content Include="Content\images\Rat-white.svg" />
     <Content Include="Content\images\view-details-icon-blue.svg" />
     <Content Include="Content\images\white-Female-icon.svg" />
     <Content Include="Content\images\white-Male-icon.svg" />
@@ -427,8 +434,6 @@
     <Content Include="Views\MedicalHistory\_PetInfo.cshtml" />
     <Content Include="Views\MedicalHistory\_OwnerInfo.cshtml" />
     <Content Include="Views\MedicalHistory\_VisitList.cshtml" />
-    <Content Include="Views\Home\_IncomeChart.cshtml" />
-    <Content Include="Views\Home\_SpeciesChart.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>

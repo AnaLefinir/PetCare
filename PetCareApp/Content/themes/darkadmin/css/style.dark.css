@@ -119,8 +119,37 @@ img.header-size {
 }
 
 .iconOwner {
+    width: 50px;
+    height: 50px;
+}
+
+.iconPet {
+    width: 50px;
+    height: 50px;
+}
+
+.titleSearch {
     
 }
+
+.set-margin {
+    margin-top: 10% !important;
+}
+.styleSearch{
+    text-align: center
+}
+.styleSearch select{
+    margin-top: 10px;
+    font-size: 1.6rem;
+    height: 3.6rem;
+}
+
+.styleSearch button {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    margin-left: 20px;
+}
+
 /*
 * ==========================================================
 *     GENERAL STYLING 
@@ -276,7 +305,7 @@ pre {
     min-height: 100vh;
     width: calc(100% - 280px);
     padding: 0;
-    padding-bottom: 70px;
+    margin-bottom: 70px;
 }
 
     .page-content.active {

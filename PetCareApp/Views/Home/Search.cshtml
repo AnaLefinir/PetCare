@@ -3,16 +3,21 @@
     ViewBag.Title = "Search";
 }
 
-<h2>Search</h2>
-
-<form method="get" action="@Url.Action("CreateVisit", "MedicalHistory")">
-    <select name="id" title="Quien nos visita hoy?">
-        @{
-            foreach (var item in Model.SearchItems)
-            {
-                <option value="@item.PetId">@item.Description</option>
-            }
-        }
-    </select>
-    <button type="submit">Search</button>
-</form>
+@{Model.SearchItems = @Model.SearchItems.OrderBy(s => s.Description).ToList();}
+<div class="row">
+    <div class="block col-lg 6 offset-lg-3 set-margin">
+        <form method="get" class="styleSearch" action="@Url.Action("CreateVisit", "MedicalHistory")">
+            <h1 class="titleSearch">Who is visiting us today?</h1>
+            <select class="custom-select" style="margin-top: 10px" name="id">
+                @{
+                    foreach (var item in Model.SearchItems)
+                    {
+                        <option value="@item.PetId">@item.Description</option>
+                    }
+                }
+            </select>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px">Search</button>
+        </form>
+    </div>
+    <div class="col-lg-4"></div>
+</div>

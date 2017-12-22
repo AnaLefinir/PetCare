@@ -7,19 +7,19 @@
                 var genre = Model.OwnerGenre;
                 if (ViewBag.Theme == "dark")
                 {
-                    <img class="sizeInfo" src="~/Content/images/@genre-white.svg" />
+                    <img class="iconOwner setopacity" src="~/Content/images/white-@genre-icon.svg" />
                 }
                 else
                 {
-                    <img class="sizeInfo" src="~/Content/images/@genre-black.svg" />
+                    <img class="iconOwner setopacity" src="~/Content/images/black-@genre-icon.svg" />
                 }
             }
         </div>
         <div class="info">
             <h3>Owner Info</h3>
             <ul>
-                <li> Name = @Model.OwnerName, </li>
-                <li> Phone = @Model.OwnerPhone.</li>
+                <li> Name = @Model.OwnerName </li>
+                <li> Phone = @Model.OwnerPhone</li>
             </ul>
         </div>
     </div>

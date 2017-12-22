@@ -14,11 +14,11 @@
 
                 if (ViewBag.Theme == "dark")
                 {
-                    <img class="sizeInfo setopacity" src="~/Content/images/@species-white.svg"/>// TODO: Crear la clase!!!y ponerla en los dos theme.
+                    <img class="sizeInfo setopacity setSizeImgMH" src="~/Content/images/@species-white.svg"/>// TODO: Crear la clase!!!y ponerla en los dos theme.
                 }
                 else
                 {
-                    <img class="sizeInfo setopacity" src="~/Content/images/@species-black.svg"/>
+                    <img class="sizeInfo setopacity setSizeImgMH" src="~/Content/images/@species-black.svg"/>
                 }
 
             }
@@ -26,9 +26,9 @@
         <div class="info">
             <h3>Pet Info</h3>
             <ul>
-                <li>Name : @Model.PetName,</li>
-                <li> Age : @Model.PetAge,</li>
-                <li>Genre : @Model.PetGenre.</li>
+                <li>Name : @Model.PetName</li>
+                <li> Age : @Model.PetAge</li>
+                <li>Genre : @Model.PetGenre</li>
             </ul>
         </div>
     </div>
