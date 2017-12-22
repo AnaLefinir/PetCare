@@ -31,7 +31,7 @@ namespace PetCareApp.Migrations
 
             Species cat = new Species { Name = "Cat" };
             Species dog = new Species { Name = "Dog" };
-            Species lemur = new Species { Name = "Lemur" };
+            Species lemur = new Species { Name = "Ferret" };
 
             var species = new List<Species>
             {
