@@ -30,9 +30,9 @@ namespace PetCareApp.Models
         public int OwnerId { get; set; }
         
         public virtual MedicalHistory MedicalHistory { get; set; }
-        [Required]
+        
         public virtual Species Species { get; set; }
-        [Required]
+        
         public virtual Owner Owner { get; set; }
     }
 }

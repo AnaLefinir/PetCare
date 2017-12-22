@@ -294,9 +294,13 @@ pre {
     color: #585a5f;
 }
 
+.background-white {
+    background: white;
+}
+
 .block {
     padding: 20px;
-    background: white;
+    padding: 20px;
     color: #8a8d93;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -308,7 +312,7 @@ pre {
     min-height: 100vh;
     width: calc(100% - 280px);
     padding: 0;
-    padding-bottom: 70px;
+    margin-bottom: 70px;
 }
 
     .page-content.active {

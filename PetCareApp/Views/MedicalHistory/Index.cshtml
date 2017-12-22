@@ -11,14 +11,17 @@
         @Html.Partial("_OwnerInfo", Model)
     </div>
     <div class="row">
-        @if (!Model.IsCreate)
-        {
-            <a class="btn btn-primary"> Add Visit </a>// TODO: Hacer el boton!
-        }
+        <div class="col-xl-2 offset-xl-10 col-sm-2 offset-sm-10">
+            @if (!Model.IsCreate)
+            {
+                <a class="btn btn-primary" href="@Url.Action("CreateVisit", "MedicalHistory", new {id= Model.PetId})"> Add Visit </a>// TODO: Hacer el boton!
+            }
+
+        </div>
     </div>
     <div class="row">
         <div class="col-lg-6">
-            <div class="block">
+            <div class="block background-white">
                 <div class="title card-Header">
                     <strong class="whiteTitle">Visit</strong>
                 </div>
@@ -78,7 +81,7 @@
                                         button = "Save changes";
                                     }
                                 }
-                                <button type="submit" class="btn btn-primary" >@button</button>
+                                <button type="submit" class="btn btn-primary">@button</button>
                             </div>
                         </div>
                     </form>

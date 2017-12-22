@@ -66,6 +66,7 @@ namespace PetCareApp.Controllers
             ViewBag.Id = new SelectList(db.MedicalHistory, "Id", "Id", pet.Id);
             ViewBag.OwnerId = new SelectList(db.Owners, "Id", "FirstName", pet.OwnerId);
             ViewBag.SpeciesId = new SelectList(db.Species, "Id", "Name", pet.SpeciesId);
+
             return View(pet);
         }
 
