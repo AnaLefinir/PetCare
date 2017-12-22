@@ -22,10 +22,19 @@
             <div class="navbar-header">
                 <a href="@Url.Action("Index", "Home")" class="navbar-brand">
                     <div class="brand-text brand-big visible text-uppercase">
-                        <strong class="text-primary">PetCare's</strong><strong>Admin</strong>
+                        @{
+                            var user = "Doctor";
+                            var userLetter = "D";
+                            if (ViewBag.IsAdmin)
+                            {
+                                user = "Admin";
+                                userLetter = "A";
+                            }
+                        }
+                        <strong class="text-primary">PetCare's</strong><strong>@user</strong>
                     </div>
                     <div class="brand-text brand-sm">
-                        <strong class="text-primary">P</strong><strong>A</strong>
+                        <strong class="text-primary">P</strong><strong>@userLetter</strong>
                     </div>
                 </a>
                 <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
