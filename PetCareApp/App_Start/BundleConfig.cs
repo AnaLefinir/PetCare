@@ -10,7 +10,9 @@ namespace PetCareApp
         {
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                 "~/Content/bootstrap.css",
-                "~/Content/font-awesome.css"));
+                "~/Content/font-awesome.css",
+                "~/Content/bootstrap-select.css"
+                ));
 
             bundles.Add(new StyleBundle("~/Content/templates/darkadmin/dark").Include(
                 "~/Content/themes/darkadmin/css/font.css",
@@ -31,7 +33,9 @@ namespace PetCareApp
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/umd/popper.js",
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/bootstrap-select.js"
+                      ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
@@ -45,6 +49,7 @@ namespace PetCareApp
             bundles.Add(new ScriptBundle("~/bundles/templates/darkadmin").Include(
                 "~/Content/themes/darkadmin/js/front.js"
             ));
+            
             //Login view
             bundles.Add(new StyleBundle("~/Content/views/login").Include(
                 "~/Content/views/login.css"));

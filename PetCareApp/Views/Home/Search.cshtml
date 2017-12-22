@@ -5,12 +5,14 @@
 
 <h2>Search</h2>
 
-<ul>
-    @{
-        foreach (var item in Model.SearchItems)
-        {
-            <li>@item.PetId @item.Description</li>
+<form method="get" action="@Url.Action("CreateVisit", "MedicalHistory")">
+    <select name="id" title="Quien nos visita hoy?">
+        @{
+            foreach (var item in Model.SearchItems)
+            {
+                <option value="@item.PetId">@item.Description</option>
+            }
         }
-    }
-</ul>
-
+    </select>
+    <button type="submit">Search</button>
+</form>
