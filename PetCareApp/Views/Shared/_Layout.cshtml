@@ -23,7 +23,7 @@
     @Html.Partial("_Header")
     <div class="d-flex align-items-stretch">
         @Html.Partial("_SideBar")
-        <div class="page-content isSearch">
+        <div class="page-content isSearch" style="overflow-x: hidden">
             @{
                 if (ViewBag.Title == "Search" && ViewBag.Theme == "dark")
                 {
