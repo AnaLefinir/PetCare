@@ -14,7 +14,7 @@ namespace PetCareApp.Migrations
                         Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Pet", t => t.Id)
+                .ForeignKey("dbo.Pet", t => t.Id, cascadeDelete: true)
                 .Index(t => t.Id);
             
             CreateTable(
